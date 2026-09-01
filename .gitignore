@@ -1,3 +1,7 @@
-postgis-3.5.2/
-postgresql/
 *.tar.gz
+*.tar
+postgis-*/build/
+postgresql/build/
+*.o
+*.so
+*.a
