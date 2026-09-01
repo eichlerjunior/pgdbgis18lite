@@ -1,0 +1,4 @@
+
+            This function automatically includes a bounding box comparison
+            that makes use of any spatial indexes that are available on the geometries.
+        

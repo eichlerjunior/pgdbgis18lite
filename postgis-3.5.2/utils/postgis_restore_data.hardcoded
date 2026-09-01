@@ -1,0 +1,244 @@
+ACL SCHEMA topology
+ACL TABLE geography_columns
+ACL TABLE geometry_columns
+ACL TABLE layer
+ACL TABLE raster_columns
+ACL TABLE raster_overviews
+ACL TABLE spatial_ref_sys
+ACL TABLE topology
+CAST (box2d AS box3d)
+CAST (box2d AS geometry)
+CAST (box3d AS box)
+CAST (box3d AS box2d)
+CAST (box3d AS geometry)
+CAST (bytea AS geography)
+CAST (bytea AS geometry)
+CAST CAST (box2d AS box3d)
+CAST CAST (box2d AS geometry)
+CAST CAST (box3d AS box)
+CAST CAST (box3d AS box2d)
+CAST CAST (box3d AS geometry)
+CAST CAST (bytea AS geography)
+CAST CAST (bytea AS geometry)
+CAST CAST (geography AS bytea)
+CAST CAST (geography AS geography)
+CAST CAST (geography AS geometry)
+CAST CAST (geometry AS box)
+CAST CAST (geometry AS box2d)
+CAST CAST (geometry AS box3d)
+CAST CAST (geometry AS bytea)
+CAST CAST (geometry AS geography)
+CAST CAST (geometry AS geometry)
+CAST CAST (geometry AS json)
+CAST CAST (geometry AS jsonb)
+CAST CAST (geometry AS path)
+CAST CAST (geometry AS point)
+CAST CAST (geometry AS polygon)
+CAST CAST (geometry AS text)
+CAST CAST (path AS geometry)
+CAST CAST (point AS geometry)
+CAST CAST (polygon AS geometry)
+CAST CAST (raster AS box3d)
+CAST CAST (raster AS bytea)
+CAST CAST (raster AS geometry)
+CAST CAST (text AS geometry)
+CAST CAST (topogeometry AS geometry)
+CAST CAST (topogeometry AS integer[])
+CAST (geography AS bytea)
+CAST (geography AS geography)
+CAST (geography AS geometry)
+CAST (geometry AS box)
+CAST (geometry AS box2d)
+CAST (geometry AS box3d)
+CAST (geometry AS bytea)
+CAST (geometry AS geography)
+CAST (geometry AS geometry)
+CAST (geometry AS json)
+CAST (geometry AS jsonb)
+CAST (geometry AS path)
+CAST (geometry AS point)
+CAST (geometry AS polygon)
+CAST (geometry AS text)
+CAST (path AS geometry)
+CAST (point AS geometry)
+CAST (polygon AS geometry)
+CAST (text AS geometry)
+CONSTRAINT layer layer_pkey
+CONSTRAINT layer layer_schema_name_table_name_feature_column_key
+CONSTRAINT spatial_ref_sys spatial_ref_sys_pkey
+CONSTRAINT topology topology_name_key
+CONSTRAINT topology topology_pkey
+DEFAULT topology id
+DOMAIN topoelement
+DOMAIN topoelementarray
+FK CONSTRAINT layer layer_topology_id_fkey
+FUNCTION jsonb(geometry)
+FUNCTION json(geometry)
+FUNCTION lockrow(text, text, text, text, timestamp without time zone)
+FUNCTION lockrow(text, text, text, timestamp without time zone)
+FUNCTION _st_aspect4ma(double precision[], integer[], text[])
+FUNCTION st_concavehull(geometry, double precision, boolean)
+FUNCTION _st_convertarray4ma(double precision[])
+FUNCTION st_distinct4ma(double precision[], integer[], text[])
+FUNCTION st_distinct4ma(double precision[], text, text[])
+FUNCTION _st_grayscale4ma(double precision[], integer[], text[])
+FUNCTION _st_hillshade4ma(double precision[], integer[], text[])
+FUNCTION st_invdistweight4ma(double precision[], integer[], text[])
+FUNCTION _st_mapalgebra(rastbandarg[], regprocedure, text, integer, integer, text, raster, double precision[], boolean, text[])
+FUNCTION st_mapalgebra(raster, integer, regprocedure, double precision[], boolean, text, text, raster, text[])
+FUNCTION st_max4ma(double precision[], integer[], text[])
+FUNCTION st_max4ma(double precision[], text, text[])
+FUNCTION st_mean4ma(double precision[], integer[], text[])
+FUNCTION st_mean4ma(double precision[], text, text[])
+FUNCTION st_min4ma(double precision[], integer[], text[])
+FUNCTION st_min4ma(double precision[], text, text[])
+FUNCTION st_mindist4ma(double precision[], integer[], text[])
+FUNCTION st_range4ma(double precision[], integer[], text[])
+FUNCTION st_range4ma(double precision[], text, text[])
+FUNCTION st_rastertoworldcoord(raster, integer, integer)
+FUNCTION _st_roughness4ma(double precision[], integer[], text[])
+FUNCTION st_setvalues(raster, integer, integer, integer, double precision[], boolean[], boolean)
+FUNCTION _st_setvalues(raster, integer, integer, integer, double precision[], boolean[], boolean, double precision, boolean)
+FUNCTION st_setvalues(raster, integer, integer, integer, double precision[], double precision, boolean)
+FUNCTION _st_slope4ma(double precision[], integer[], text[])
+FUNCTION st_stddev4ma(double precision[], integer[], text[])
+FUNCTION st_stddev4ma(double precision[], text, text[])
+FUNCTION st_sum4ma(double precision[], integer[], text[])
+FUNCTION st_sum4ma(double precision[], text, text[])
+FUNCTION _st_tpi4ma(double precision[], integer[], text[])
+FUNCTION _st_tri4ma(double precision[], integer[], text[])
+OPERATOR &&
+OPERATOR &&&
+OPERATOR &/&
+OPERATOR &<
+OPERATOR &<|
+OPERATOR &>
+OPERATOR <
+OPERATOR <#>
+OPERATOR <->
+OPERATOR <<
+OPERATOR <<->>
+OPERATOR <<@
+OPERATOR <<|
+OPERATOR <=
+OPERATOR <>
+OPERATOR =
+OPERATOR >
+OPERATOR >=
+OPERATOR >>
+OPERATOR @
+OPERATOR @>>
+OPERATOR @@
+OPERATOR |&>
+OPERATOR |=|
+OPERATOR |>>
+OPERATOR ~
+OPERATOR ~=
+OPERATOR ~==
+OPERATOR ~~
+OPERATOR ~~=
+OPERATOR&&(box2df,box2df)
+OPERATOR@(box2df,box2df)
+OPERATOR~(box2df,box2df)
+OPERATOR&&(box2df,geometry)
+OPERATOR@(box2df,geometry)
+OPERATOR~(box2df,geometry)
+OPERATORCLASS brin_geography_inclusion_ops
+OPERATORCLASS brin_geometry_inclusion_ops_2d
+OPERATORCLASS brin_geometry_inclusion_ops_3d
+OPERATORCLASS brin_geometry_inclusion_ops_4d
+OPERATORCLASS btree_geography_ops
+OPERATORCLASS btree_geometry_ops
+OPERATORCLASS gist_geography_ops
+OPERATORCLASS gist_geometry_ops_2d
+OPERATORCLASS gist_geometry_ops_nd
+OPERATORCLASS hash_geometry_ops
+OPERATORCLASS hash_raster_ops
+OPERATORCLASS spgist_geography_ops_nd
+OPERATORCLASS spgist_geometry_ops_2d
+OPERATORCLASS spgist_geometry_ops_3d
+OPERATORCLASS spgist_geometry_ops_nd
+OPERATOR&&(geography,geography)
+OPERATOR<(geography,geography)
+OPERATOR<->(geography,geography)
+OPERATOR<=(geography,geography)
+OPERATOR=(geography,geography)
+OPERATOR>(geography,geography)
+OPERATOR>=(geography,geography)
+OPERATOR&&(geography,gidx)
+OPERATOR&&(geometry,box2df)
+OPERATOR@(geometry,box2df)
+OPERATOR~(geometry,box2df)
+OPERATOR&&&(geometry,geometry)
+OPERATOR&&(geometry,geometry)
+OPERATOR&/&(geometry,geometry)
+OPERATOR&<(geometry,geometry)
+OPERATOR&<|(geometry,geometry)
+OPERATOR&>(geometry,geometry)
+OPERATOR<#>(geometry,geometry)
+OPERATOR<(geometry,geometry)
+OPERATOR<->(geometry,geometry)
+OPERATOR<<(geometry,geometry)
+OPERATOR<<->>(geometry,geometry)
+OPERATOR<<@(geometry,geometry)
+OPERATOR<<|(geometry,geometry)
+OPERATOR<=(geometry,geometry)
+OPERATOR=(geometry,geometry)
+OPERATOR>(geometry,geometry)
+OPERATOR>=(geometry,geometry)
+OPERATOR>>(geometry,geometry)
+OPERATOR@(geometry,geometry)
+OPERATOR@>>(geometry,geometry)
+OPERATOR@@(geometry,geometry)
+OPERATOR|&>(geometry,geometry)
+OPERATOR|=|(geometry,geometry)
+OPERATOR|>>(geometry,geometry)
+OPERATOR~(geometry,geometry)
+OPERATOR~=(geometry,geometry)
+OPERATOR~==(geometry,geometry)
+OPERATOR~~(geometry,geometry)
+OPERATOR~~=(geometry,geometry)
+OPERATOR&&&(geometry,gidx)
+OPERATOR&&(gidx,geography)
+OPERATOR&&&(gidx,geometry)
+OPERATOR&&&(gidx,gidx)
+OPERATOR&&(gidx,gidx)
+OPERATOR public brin_geography_inclusion_ops
+OPERATOR public brin_geometry_inclusion_ops_2d
+OPERATOR public brin_geometry_inclusion_ops_3d
+OPERATOR public brin_geometry_inclusion_ops_4d
+OPERATOR public btree_geography_ops
+OPERATOR public btree_geometry_ops
+OPERATOR public gist_geography_ops
+OPERATOR public gist_geometry_ops_2d
+OPERATOR public gist_geometry_ops_nd
+OPERATOR public hash_geometry_ops
+OPERATOR public hash_raster_ops
+OPERATOR public spgist_geography_ops_nd
+OPERATOR public spgist_geometry_ops_2d
+OPERATOR public spgist_geometry_ops_3d
+OPERATOR public spgist_geometry_ops_nd
+RULE geometry_columns geometry_columns_delete
+RULE geometry_columns geometry_columns_insert
+RULE geometry_columns geometry_columns_update
+SCHEMA topology
+SEQUENCE BY topology topology_id_seq
+SEQUENCE topology_id_seq
+SEQUENCE topology topology_id_seq
+SHELLTYPE box2d
+SHELLTYPE box2df
+SHELLTYPE box3d
+SHELLTYPE geography
+SHELLTYPE geometry
+SHELLTYPE gidx
+SHELLTYPE raster
+SHELLTYPE spheroid
+TABLEDATA spatial_ref_sys
+TABLE layer
+TABLE spatial_ref_sys
+TABLE topology
+TRIGGER layer layer_integrity_checks
+VIEW geography_columns
+VIEW geometry_columns
+VIEW raster_columns
+VIEW raster_overviews

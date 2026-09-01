@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="CG_3DUnion">CG_3DUnion</link> - Perform 3D union using postgis_sfcgal.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DExtent">ST_3DExtent</link> - Aggregate function that returns the 3D bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DUnion">ST_3DUnion</link> - Perform 3D union.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsFlatGeobuf">ST_AsFlatGeobuf</link> - Return a FlatGeobuf representation of a set of rows.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGeobuf">ST_AsGeobuf</link> - Return a Geobuf representation of a set of rows.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsMVT">ST_AsMVT</link> - Aggregate function returning a MVT representation of a set of rows.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterDBSCAN">ST_ClusterDBSCAN</link> - Window function that returns a cluster id for each input geometry using the DBSCAN algorithm.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterIntersecting">ST_ClusterIntersecting</link> - Aggregate function that clusters input geometries into connected sets.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterIntersectingWin">ST_ClusterIntersectingWin</link> - Window function that returns a cluster id for each input geometry, clustering input geometries into connected sets.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterKMeans">ST_ClusterKMeans</link> - Window function that returns a cluster id for each input geometry using the K-means algorithm.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterWithin">ST_ClusterWithin</link> - Aggregate function that clusters geometries by separation distance.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterWithinWin">ST_ClusterWithinWin</link> - Window function that returns a cluster id for each input geometry, clustering using separation distance.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Collect">ST_Collect</link> - Creates a GeometryCollection or Multi* geometry from a set of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoverageInvalidEdges">ST_CoverageInvalidEdges</link> - Window function that finds locations where polygons fail to form a valid coverage.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoverageSimplify">ST_CoverageSimplify</link> - Window function that simplifies the edges of a polygonal coverage.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoverageUnion">ST_CoverageUnion</link> - Computes the union of a set of polygons forming a coverage by removing shared edges.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Extent">ST_Extent</link> - Aggregate function that returns the bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakeLine">ST_MakeLine</link> - Creates a LineString from Point, MultiPoint, or LineString geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MemUnion">ST_MemUnion</link> - Aggregate function which unions geometries in a memory-efficent but slower way</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Polygonize">ST_Polygonize</link> - Computes a collection of polygons formed from the linework of a set of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="RT_ST_SameAlignment">ST_SameAlignment</link> - Returns true if rasters have same skew, scale, spatial ref, and offset (pixels can be put on same grid without cutting into pixels) and false if they don't with notice detailing issue.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Union">ST_Union</link> - Computes a geometry representing the point-set union of the input geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="RT_ST_Union">ST_Union</link> - Returns the union of a set of raster tiles into a single raster composed of 1 or more bands.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="TopoElementArray_Agg">TopoElementArray_Agg</link> - Returns a topoelementarray for a set of element_id, type arrays (topoelements).</simpara>
+  </listitem>
+</itemizedlist>

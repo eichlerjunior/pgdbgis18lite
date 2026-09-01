@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="Box2D">Box2D</link> - Returns a BOX2D representing the 2D extent of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="Box3D">Box3D</link> - Returns a BOX3D representing the 3D extent of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DArea">CG_3DArea</link> - Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DConvexHull">CG_3DConvexHull</link> - Computes the 3D convex hull of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DDifference">CG_3DDifference</link> - Perform 3D difference</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DIntersection">CG_3DIntersection</link> - Perform 3D intersection</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DUnion">CG_3DUnion</link> - Perform 3D union using postgis_sfcgal.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_ApproximateMedialAxis">CG_ApproximateMedialAxis</link> - Compute the approximate medial axis of an areal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Extrude">CG_Extrude</link> - Extrude a surface to a related volume</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_ForceLHR">CG_ForceLHR</link> - Force LHR orientation</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_IsPlanar">CG_IsPlanar</link> - Check if a surface is or not planar</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_IsSolid">CG_IsSolid</link> - Test if the geometry is a solid. No validity check is performed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_MakeSolid">CG_MakeSolid</link> - Cast the geometry into a solid. No check is performed. To obtain a valid solid, the input geometry must be a closed Polyhedral Surface or a closed TIN.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_StraightSkeleton">CG_StraightSkeleton</link> - Compute a straight skeleton from a geometry</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Tesselate">CG_Tesselate</link> - Perform surface Tessellation of a polygon or polyhedralsurface and returns as a TIN or collection of TINS</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Visibility">CG_Visibility</link> - Compute a visibility polygon from a point or a segment in a polygon geometry</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Volume">CG_Volume</link> - Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="GeometryType">GeometryType</link> - Returns the type of a geometry as text.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DArea">ST_3DArea</link> - Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DClosestPoint">ST_3DClosestPoint</link> - Returns the 3D point on g1 that is closest to g2. This is the first point of the 3D shortest line.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DConvexHull">ST_3DConvexHull</link> - Computes the 3D convex hull of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDFullyWithin">ST_3DDFullyWithin</link> - Tests if two 3D geometries are entirely within a given 3D distance</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDWithin">ST_3DDWithin</link> - Tests if two 3D geometries are within a given 3D distance</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDifference">ST_3DDifference</link> - Perform 3D difference</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDistance">ST_3DDistance</link> - Returns the 3D cartesian minimum distance (based on spatial ref) between two geometries in projected units.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DExtent">ST_3DExtent</link> - Aggregate function that returns the 3D bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DIntersection">ST_3DIntersection</link> - Perform 3D intersection</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DIntersects">ST_3DIntersects</link> - Tests if two geometries spatially intersect in 3D - only for points, linestrings, polygons, polyhedral surface (area)</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DLongestLine">ST_3DLongestLine</link> - Returns the 3D longest line between two geometries</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DMaxDistance">ST_3DMaxDistance</link> - Returns the 3D cartesian maximum distance (based on spatial ref) between two geometries in projected units.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DShortestLine">ST_3DShortestLine</link> - Returns the 3D shortest line between two geometries</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DUnion">ST_3DUnion</link> - Perform 3D union.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Affine">ST_Affine</link> - Apply a 3D affine transformation to a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ApproximateMedialAxis">ST_ApproximateMedialAxis</link> - Compute the approximate medial axis of an areal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Area">ST_Area</link> - Returns the area of a polygonal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsEWKB">ST_AsEWKB</link> - Return the Extended Well-Known Binary (EWKB) representation of the geometry with SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsEWKT">ST_AsEWKT</link> - Return the Well-Known Text (WKT) representation of the geometry with SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Return the geometry as a GML version 2 or 3 element.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsX3D">ST_AsX3D</link> - Returns a Geometry in X3D xml node element format: ISO-IEC-19776-1.2-X3DEncodings-XML</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoordDim">ST_CoordDim</link> - Return the coordinate dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Dimension">ST_Dimension</link> - Returns the topological dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Dump">ST_Dump</link> - Returns a set of geometry_dump rows for the components of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpPoints">ST_DumpPoints</link> - Returns a set of geometry_dump rows for the coordinates in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Expand">ST_Expand</link> - Returns a bounding box expanded from another bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Extent">ST_Extent</link> - Aggregate function that returns the bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Extrude">ST_Extrude</link> - Extrude a surface to a related volume</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_FlipCoordinates">ST_FlipCoordinates</link> - Returns a version of a geometry with X and Y axis flipped.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force2D">ST_Force2D</link> - Force the geometries into a "2-dimensional mode".</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceLHR">ST_ForceLHR</link> - Force LHR orientation</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceRHR">ST_ForceRHR</link> - Force the orientation of the vertices in a polygon to follow the Right-Hand-Rule.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceSFS">ST_ForceSFS</link> - Force the geometries to use SFS 1.1 geometry types only.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_3D">ST_Force3D</link> - Force the geometries into XYZ mode. This is an alias for ST_Force3DZ.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_3DZ">ST_Force3DZ</link> - Force the geometries into XYZ mode.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_Collection">ST_ForceCollection</link> - Convert the geometry into a GEOMETRYCOLLECTION.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromEWKB">ST_GeomFromEWKB</link> - Return a specified ST_Geometry value from Extended Well-Known Binary representation (EWKB).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromEWKT">ST_GeomFromEWKT</link> - Return a specified ST_Geometry value from Extended Well-Known Text representation (EWKT).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromGML">ST_GeomFromGML</link> - Takes as input GML representation of geometry and outputs a PostGIS geometry object</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryN">ST_GeometryN</link> - Return an element of a geometry collection.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryType">ST_GeometryType</link> - Returns the SQL-MM type of a geometry as text.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Geometry_EQ">=</link> - Returns TRUE if the coordinates and coordinate order geometry/geography A are the same as the coordinates and coordinate order of geometry/geography B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Geometry_Overbelow">&amp;&lt;|</link> - Returns TRUE if A's bounding box overlaps or is below B's.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Geometry_Same">~=</link> - Returns TRUE if A's bounding box is the same as B's.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsClosed">ST_IsClosed</link> - Tests if a LineStrings's start and end points are coincident. For a PolyhedralSurface tests if it is closed (volumetric).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsPlanar">ST_IsPlanar</link> - Check if a surface is or not planar</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsSolid">ST_IsSolid</link> - Test if the geometry is a solid. No validity check is performed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakeSolid">ST_MakeSolid</link> - Cast the geometry into a solid. No check is performed. To obtain a valid solid, the input geometry must be a closed Polyhedral Surface or a closed TIN.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MemSize">ST_MemSize</link> - Returns the amount of memory space a geometry takes.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NPoints">ST_NPoints</link> - Returns the number of points (vertices) in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumGeometries">ST_NumGeometries</link> - Returns the number of elements in a geometry collection.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumPatches">ST_NumPatches</link> - Return the number of faces on a Polyhedral Surface. Will return null for non-polyhedral geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PatchN">ST_PatchN</link> - Returns the Nth geometry (face) of a PolyhedralSurface.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemoveRepeatedPoints">ST_RemoveRepeatedPoints</link> - Returns a version of a geometry with duplicate points removed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Reverse">ST_Reverse</link> - Return the geometry with vertex order reversed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Rotate">ST_Rotate</link> - Rotates a geometry about an origin point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RotateX">ST_RotateX</link> - Rotates a geometry about the X axis.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RotateY">ST_RotateY</link> - Rotates a geometry about the Y axis.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RotateZ">ST_RotateZ</link> - Rotates a geometry about the Z axis.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Scale">ST_Scale</link> - Scales a geometry by given factors.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ShiftLongitude">ST_ShiftLongitude</link> - Shifts the longitude coordinates of a geometry between -180..180 and 0..360.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_StraightSkeleton">ST_StraightSkeleton</link> - Compute a straight skeleton from a geometry</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Summary">ST_Summary</link> - Returns a text summary of the contents of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SwapOrdinates">ST_SwapOrdinates</link> - Returns a version of the given geometry with given ordinate values swapped.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Tesselate">ST_Tesselate</link> - Perform surface Tessellation of a polygon or polyhedralsurface and returns as a TIN or collection of TINS</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Transform">ST_Transform</link> - Return a new geometry with coordinates transformed to a different spatial reference system.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Volume">ST_Volume</link> - Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="contains_box2df_box2df">~(box2df,box2df)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) contains another 2D float precision bounding box (BOX2DF).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="contains_box2df_geometry">~(box2df,geometry)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) contains a geometry's 2D bonding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="contains_geometry_box2df">~(geometry,box2df)</link> - Returns TRUE if a geometry's 2D bonding box contains a 2D float precision bounding box (GIDX).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="geometry_overlaps">&amp;&amp;</link> - Returns TRUE if A's 2D bounding box intersects B's 2D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="geometry_overlaps_nd">&amp;&amp;&amp;</link> - Returns TRUE if A's n-D bounding box intersects B's n-D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="is_contained_box2df_box2df">@(box2df,box2df)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) is contained into another 2D float precision bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="is_contained_box2df_geometry">@(box2df,geometry)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) is contained into a geometry's 2D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="is_contained_geometry_box2df">@(geometry,box2df)</link> - Returns TRUE if a geometry's 2D bounding box is contained into a 2D float precision bounding box (BOX2DF).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_box2df_box2df">&amp;&amp;(box2df,box2df)</link> - Returns TRUE if two 2D float precision bounding boxes (BOX2DF) intersect each other.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_box2df_geometry">&amp;&amp;(box2df,geometry)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) intersects a geometry's (cached) 2D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_geometry_box2df">&amp;&amp;(geometry,box2df)</link> - Returns TRUE if a geometry's (cached) 2D bounding box intersects a 2D float precision bounding box (BOX2DF).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_nd_geometry_gidx">&amp;&amp;&amp;(geometry,gidx)</link> - Returns TRUE if a geometry's (cached) n-D bounding box intersects a n-D float precision bounding box (GIDX).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_nd_gidx_geometry">&amp;&amp;&amp;(gidx,geometry)</link> - Returns TRUE if a n-D float precision bounding box (GIDX) intersects a geometry's (cached) n-D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_nd_gidx_gidx">&amp;&amp;&amp;(gidx,gidx)</link> - Returns TRUE if two n-D float precision bounding boxes (GIDX) intersect each other.</simpara>
+  </listitem>
+</itemizedlist>

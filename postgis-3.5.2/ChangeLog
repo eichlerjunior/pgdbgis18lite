@@ -1,0 +1,105 @@
+2025-01-18  Regina Obe <lr@pcorp.us>
+
+	* NEWS: Prep for 3.5.2
+
+2025-01-17  Regina Obe <lr@pcorp.us>
+
+	* NEWS, Version.config, doc/release_notes.xml: Prep for PostGIS
+	3.5.2 release
+
+2025-01-13  Regina Obe <lr@pcorp.us>
+
+	* .woodpecker/docs.yml, .woodpecker/regress.yml: Woodie changes  - set doc to use repo.osgeo.org instead of docker.osgeo.org  - Change regress testings from PG15 to PG17
+
+2025-01-13  Regina Obe <lr@pcorp.us>
+
+	* NEWS: NEWS update, References #5564 for PostGIS 3.5.2
+
+2025-01-13  Regina Obe <lr@pcorp.us>
+
+	* postgis/brin_2d.c, postgis/brin_nd.c,
+	postgis/geography_brin.sql.in, postgis/postgis_after_upgrade.sql,
+	postgis/postgis_brin.sql.in, regress/core/regress_brin_index.sql,
+	regress/core/regress_brin_index_3d.sql,
+	regress/core/regress_brin_index_geography.sql: BRIN Merge Support   - Add merge AM support function (11) for all BRIN operator class     families. Supports parallel BRIN build on PG17+     and in general should fix some longstanding low-probability
+	    crash cases related to BRIN.   - Add upgrade logic to shimmy in the brin_inclusion_merge functions  - Add crash tests References #5564 for PostGIS 3.5.2
+
+2025-01-07  Regina Obe <lr@pcorp.us>
+
+	* NEWS, sfcgal/Makefile.in, sfcgal/postgis_sfcgal_legacy.c: 
+	pg_upgrade postgis_sfcgal failing because of missing
+	ST_ConstrainDelaunayTriangles signature Closes #5833 for PostGIS 3.5.2
+
+2025-01-07  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* NEWS, postgis/lwgeom_geos.c: Retain SRID during unary union,
+	references #5677
+
+2024-12-22  Regina Obe <lr@pcorp.us>
+
+	* NEWS, Version.config, extensions/upgradeable_versions.mk: Prep for
+	next 3.5 dev cycle
+
+2024-12-22  Regina Obe <lr@pcorp.us>
+
+	* doc/release_notes.xml: Fix link tag, was using old ulink, instead
+	of new link
+
+2024-12-22  Regina Obe <lr@pcorp.us>
+
+	* NEWS, README.postgis, Version.config, doc/release_notes.xml: 
+	Prepping for PostGIS 3.5.1 release
+
+2024-12-22  Regina Obe <lr@pcorp.us>
+
+	* doc/reference_output.xml: Fix ST_AsMVTGeom example.  Closes #5758
+	for PostGIS 3.5.1
+
+2024-12-22  Regina Obe <lr@pcorp.us>
+
+	* extensions/upgradeable_versions.mk: Add micro version upgrades for
+	soon to be released micros
+
+2024-12-21  Regina Obe <lr@pcorp.us>
+
+	* NEWS, doc/installation.xml,
+	extensions/postgis_tiger_geocoder/Makefile.in,
+	extras/tiger_geocoder/tiger_loader_2024.sql: Update tiger geocoder
+	to handle TIGER 2024 data Closes #5810 for PostGIS 3.5.1
+
+2024-12-20  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* NEWS: News entry for #5823
+
+2024-12-20  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* libpgcommon/Makefile.in, libpgcommon/common.h,
+	libpgcommon/lwgeom_pg.h, libpgcommon/pgsql_compat.h,
+	postgis/flatgeobuf.c, postgis/geobuf.c, postgis/mvt.c,
+	topology/postgis_topology.c: Remove old override of TupleDescAttr as
+	no longer required for pgsql >= 10. Closes #5823
+
+2024-12-13  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* postgis/geography_inout.c, postgis/lwgeom_inout.c,
+	raster/rt_core/rt_gdal.c, raster/rt_core/rt_geometry.c: Handle null
+	returns from wkb parser
+
+2024-12-12  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* NEWS, postgis/postgis.sql.in: Remove false guarantees of
+	hashes/merges from <> operator, references #5815
+
+2024-11-22  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* NEWS: News item for #5812
+
+2024-11-22  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* postgis/lwgeom_geos_predicates.c: Fix performance regression in
+	ST_Within, closes #5812
+
+2024-11-19  Paul Ramsey <pramsey@cleverelephant.ca>
+
+	* Add news entry for #5677
+

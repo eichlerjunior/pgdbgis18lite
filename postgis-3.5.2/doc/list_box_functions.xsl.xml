@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="Box2D">Box2D</link> - Returns a BOX2D representing the 2D extent of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="Box3D">Box3D</link> - Returns a BOX3D representing the 3D extent of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="RT_Box3D">Box3D</link> - Returns the box 3d representation of the enclosing box of the raster.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DExtent">ST_3DExtent</link> - Aggregate function that returns the 3D bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DMakeBox">ST_3DMakeBox</link> - Creates a BOX3D defined by two 3D point geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsMVTGeom">ST_AsMVTGeom</link> - Transforms a geometry into the coordinate space of a MVT tile.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsTWKB">ST_AsTWKB</link> - Returns the geometry as TWKB, aka "Tiny Well-Known Binary"</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Box2dFromGeoHash">ST_Box2dFromGeoHash</link> - Return a BOX2D from a GeoHash string.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClipByBox2D">ST_ClipByBox2D</link> - Computes the portion of a geometry falling within a rectangle.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_EstimatedExtent">ST_EstimatedExtent</link> - Returns the estimated extent of a spatial table.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Expand">ST_Expand</link> - Returns a bounding box expanded from another bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Extent">ST_Extent</link> - Aggregate function that returns the bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakeBox2D">ST_MakeBox2D</link> - Creates a BOX2D defined by two 2D point geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemoveIrrelevantPointsForView">ST_RemoveIrrelevantPointsForView</link> - Removes points that are irrelevant for rendering a specific rectangluar view of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_XMax">ST_XMax</link> - Returns the X maxima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_XMin">ST_XMin</link> - Returns the X minima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_YMax">ST_YMax</link> - Returns the Y maxima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_YMin">ST_YMin</link> - Returns the Y minima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ZMax">ST_ZMax</link> - Returns the Z maxima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ZMin">ST_ZMin</link> - Returns the Z minima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="TP_RemoveUnusedPrimitives">RemoveUnusedPrimitives</link> - Removes topology primitives which not needed to define existing TopoGeometry objects.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ValidateTopology">ValidateTopology</link> - Returns a set of validatetopology_returntype objects detailing issues with topology.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="contains_box2df_box2df">~(box2df,box2df)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) contains another 2D float precision bounding box (BOX2DF).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="contains_box2df_geometry">~(box2df,geometry)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) contains a geometry's 2D bonding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="contains_geometry_box2df">~(geometry,box2df)</link> - Returns TRUE if a geometry's 2D bonding box contains a 2D float precision bounding box (GIDX).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="is_contained_box2df_box2df">@(box2df,box2df)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) is contained into another 2D float precision bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="is_contained_box2df_geometry">@(box2df,geometry)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) is contained into a geometry's 2D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="is_contained_geometry_box2df">@(geometry,box2df)</link> - Returns TRUE if a geometry's 2D bounding box is contained into a 2D float precision bounding box (BOX2DF).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_box2df_box2df">&amp;&amp;(box2df,box2df)</link> - Returns TRUE if two 2D float precision bounding boxes (BOX2DF) intersect each other.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_box2df_geometry">&amp;&amp;(box2df,geometry)</link> - Returns TRUE if a 2D float precision bounding box (BOX2DF) intersects a geometry's (cached) 2D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_geometry_box2df">&amp;&amp;(geometry,box2df)</link> - Returns TRUE if a geometry's (cached) 2D bounding box intersects a 2D float precision bounding box (BOX2DF).</simpara>
+  </listitem>
+</itemizedlist>

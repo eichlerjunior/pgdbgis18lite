@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="ST_ClusterDBSCAN">ST_ClusterDBSCAN</link> - Window function that returns a cluster id for each input geometry using the DBSCAN algorithm.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterIntersectingWin">ST_ClusterIntersectingWin</link> - Window function that returns a cluster id for each input geometry, clustering input geometries into connected sets.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterKMeans">ST_ClusterKMeans</link> - Window function that returns a cluster id for each input geometry using the K-means algorithm.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClusterWithinWin">ST_ClusterWithinWin</link> - Window function that returns a cluster id for each input geometry, clustering using separation distance.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoverageInvalidEdges">ST_CoverageInvalidEdges</link> - Window function that finds locations where polygons fail to form a valid coverage.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoverageSimplify">ST_CoverageSimplify</link> - Window function that simplifies the edges of a polygonal coverage.</simpara>
+  </listitem>
+</itemizedlist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="RT_ST_DumpAsPolygons">ST_DumpAsPolygons</link> - Returns a set of geomval (geom,val) rows, from a given raster band. If no band number is specified, band num defaults to 1.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="RT_ST_Intersection">ST_Intersection</link> - Returns a raster or a set of geometry-pixelvalue pairs representing the shared portion of two rasters or the geometrical intersection of a vectorization of the raster and a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Dump">ST_Dump</link> - Returns a set of geometry_dump rows for the components of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpPoints">ST_DumpPoints</link> - Returns a set of geometry_dump rows for the coordinates in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpRings">ST_DumpRings</link> - Returns a set of geometry_dump rows for the exterior and interior rings of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpSegments">ST_DumpSegments</link> - Returns a set of geometry_dump rows for the segments in a geometry.</simpara>
+  </listitem>
+</itemizedlist>

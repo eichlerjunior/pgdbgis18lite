@@ -1,0 +1,2280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section>
+  <title>PostGIS Functions new or enhanced in 3.5</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 3.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="CG_3DArea">CG_3DArea</link> - Availability: 3.5.0 Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_3DConvexHull">CG_3DConvexHull</link> - Availability: 3.5.0 Computes the 3D convex hull of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_3DDifference">CG_3DDifference</link> - Availability: 3.5.0 Perform 3D difference</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_3DDistance">CG_3DDistance</link> - Availability: 3.5.0 Computes the minimum 3D distance between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_3DIntersection">CG_3DIntersection</link> - Availability: 3.5.0 Perform 3D intersection</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_3DIntersects">CG_3DIntersects</link> - Availability: 3.5.0 Tests if two 3D geometries intersect</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_3DUnion">CG_3DUnion</link> - Availability: 3.5.0 Perform 3D union using postgis_sfcgal.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_AlphaShape">CG_AlphaShape</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.4.1. Computes an Alpha-shape enclosing a geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_ApproxConvexPartition">CG_ApproxConvexPartition</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.5.0. Computes approximal convex partition of the polygon geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_ApproximateMedialAxis">CG_ApproximateMedialAxis</link> - Availability: 3.5.0 Compute the approximate medial axis of an areal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Area">CG_Area</link> - Availability: 3.5.0 Calculates the area of a geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Difference">CG_Difference</link> - Availability: 3.5.0 Computes the geometric difference between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Distance">CG_Distance</link> - Availability: 3.5.0 Computes the minimum distance between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Extrude">CG_Extrude</link> - Availability: 3.5.0 Extrude a surface to a related volume</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_ExtrudeStraightSkeleton">CG_ExtrudeStraightSkeleton</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.5.0. Straight Skeleton Extrusion</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_ForceLHR">CG_ForceLHR</link> - Availability: 3.5.0 Force LHR orientation</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_GreeneApproxConvexPartition">CG_GreeneApproxConvexPartition</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.5.0. Computes approximal convex partition of the polygon geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Intersection">CG_Intersection</link> - Availability: 3.5.0 Computes the intersection of two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Intersects">CG_Intersects</link> - Availability: 3.5.0 Tests if two geometries intersect (they have at least one point in common)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_IsPlanar">CG_IsPlanar</link> - Availability: 3.5.0 Check if a surface is or not planar</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_IsSolid">CG_IsSolid</link> - Availability: 3.5.0 Test if the geometry is a solid. No validity check is performed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_MakeSolid">CG_MakeSolid</link> - Availability: 3.5.0 Cast the geometry into a solid. No check is performed. To obtain a valid solid, the input geometry must be a closed Polyhedral Surface or a closed TIN.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_MinkowskiSum">CG_MinkowskiSum</link> - Availability: 3.5.0 Performs Minkowski sum</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_OptimalAlphaShape">CG_OptimalAlphaShape</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.4.1. Computes an Alpha-shape enclosing a geometry using an "optimal" alpha value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_OptimalConvexPartition">CG_OptimalConvexPartition</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.5.0. Computes an optimal convex partition of the polygon geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Orientation">CG_Orientation</link> - Availability: 3.5.0 Determine surface orientation</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_StraightSkeleton">CG_StraightSkeleton</link> - Availability: 3.5.0 Compute a straight skeleton from a geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Tesselate">CG_Tesselate</link> - Availability: 3.5.0 Perform surface Tessellation of a polygon or polyhedralsurface and returns as a TIN or collection of TINS</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Triangulate">CG_Triangulate</link> - Availability: 3.5.0 Triangulates a polygonal geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Union">CG_Union</link> - Availability: 3.5.0 Computes the union of two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Visibility">CG_Visibility</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.5.0. Compute a visibility polygon from a point or a segment in a polygon geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_Volume">CG_Volume</link> - Availability: 3.5.0 Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CG_YMonotonePartition">CG_YMonotonePartition</link> - Availability: 3.5.0 - requires SFCGAL &gt;= 1.5.0. Computes y-monotone partition of the polygon geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_HasM">ST_HasM</link> - Availability: 3.5.0 Checks if a geometry has an M (measure) dimension.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_HasZ">ST_HasZ</link> - Availability: 3.5.0 Checks if a geometry has a Z dimension.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemoveIrrelevantPointsForView">ST_RemoveIrrelevantPointsForView</link> - Availability: 3.5.0 Removes points that are irrelevant for rendering a specific rectangluar view of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemoveSmallParts">ST_RemoveSmallParts</link> - Availability: 3.5.0 Removes small parts (polygon rings or linestrings) of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeo_LoadGeometry">TopoGeo_LoadGeometry</link> - Availability: 3.5.0 Load a geometry into an existing topology, snapping and splitting as needed.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 3.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_ST_Clip">ST_Clip</link> - Enhanced: 3.5.0 - touched argument added. Returns the raster clipped by the input geometry. If band number is not specified, all bands are processed. If crop is not specified or TRUE, the output raster is cropped. If touched is set to TRUE, then touched pixels are included, otherwise only if the center of the pixel is in the geometry it is included.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 3.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Changed: 3.5.0 allow specifying the column containing the feature id Return a geometry or feature in GeoJSON format.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DFullyWithin">ST_DFullyWithin</link> - Changed: 3.5.0 : the logic behind the function now uses a test of containment within a buffer, rather than the ST_MaxDistance algorithm. Results will differ from prior versions, but should be closer to user expectations. Tests if a geometry is entirely inside a distance of another</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 3.4</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 3.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="PostGIS_GEOS_Compiled_Version">PostGIS_GEOS_Compiled_Version</link> - Availability: 3.4.0 Returns the version number of the GEOS library against which PostGIS was built.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="PostGIS_PROJ_Compiled_Version">PostGIS_PROJ_Compiled_Version</link> - Availability: 3.5.0 Returns the version number of the PROJ library against which PostGIS was built.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RenameTopoGeometryColumn">RenameTopoGeometryColumn</link> - Availability: 3.4.0 Renames a topogeometry column</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RenameTopology">RenameTopology</link> - Availability: 3.4.0 Renames a topology</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterIntersectingWin">ST_ClusterIntersectingWin</link> - Availability: 3.4.0 Window function that returns a cluster id for each input geometry, clustering input geometries into connected sets.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterWithinWin">ST_ClusterWithinWin</link> - Availability: 3.4.0 Window function that returns a cluster id for each input geometry, clustering using separation distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CoverageInvalidEdges">ST_CoverageInvalidEdges</link> - Availability: 3.4.0 Window function that finds locations where polygons fail to form a valid coverage.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CoverageSimplify">ST_CoverageSimplify</link> - Availability: 3.4.0 Window function that simplifies the edges of a polygonal coverage.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CoverageUnion">ST_CoverageUnion</link> - Availability: 3.4.0 - requires GEOS &gt;= 3.8.0 Computes the union of a set of polygons forming a coverage by removing shared edges.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_InverseTransformPipeline">ST_InverseTransformPipeline</link> - Availability: 3.4.0 Return a new geometry with coordinates transformed to a different spatial reference system using the inverse of a defined coordinate transformation pipeline.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LargestEmptyCircle">ST_LargestEmptyCircle</link> - Availability: 3.4.0. Computes the largest circle not overlapping a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineExtend">ST_LineExtend</link> - Availability: 3.4.0 Returns a line extended forwards and backwards by specified distances.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_TransformPipeline">ST_TransformPipeline</link> - Availability: 3.4.0 Return a new geometry with coordinates transformed to a different spatial reference system using a defined coordinate transformation pipeline.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoElement">TopoElement</link> - Availability: 3.4.0 Converts a topogeometry to a topoelement.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="debug_standardize_address">debug_standardize_address</link> - Availability: 3.4.0 Returns a json formatted text listing the parse tokens and standardizations</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_srs">postgis_srs</link> - Availability: 3.4.0 Return a metadata record for the requested authority and srid.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_srs_all">postgis_srs_all</link> - Availability: 3.4.0 Return metadata records for every spatial reference system in the underlying Proj database.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_srs_codes">postgis_srs_codes</link> - Availability: 3.4.0 Return the list of SRS codes associated with the given authority.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_srs_search">postgis_srs_search</link> - Availability: 3.4.0 Return metadata records for projected coordinate systems that have areas of usage that fully contain the bounds parameter.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 3.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="PostGIS_Full_Version">PostGIS_Full_Version</link> - Enhanced: 3.4.0 now includes extra PROJ configurations NETWORK_ENABLED, URL_ENDPOINT and DATABASE_PATH of proj.db location  Reports full PostGIS version and build configuration infos.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="PostGIS_PROJ_Version">PostGIS_PROJ_Version</link> - Enhanced: 3.4.0 now includes NETWORK_ENABLED, URL_ENDPOINT and DATABASE_PATH of proj.db location  Returns the version number of the PROJ4 library.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsSVG">ST_AsSVG</link> - Enhanced: 3.4.0 to support all curve types Returns SVG path data for a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClosestPoint">ST_ClosestPoint</link> - Enhanced: 3.4.0 -  Support for geography. Returns the 2D point on g1 that is closest to g2. This is the first point of the shortest line from one geometry to the other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineSubstring">ST_LineSubstring</link> - Enhanced: 3.4.0 - Support for geography was introduced. Returns the part of a line between two fractional locations.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Project">ST_Project</link> - Enhanced: 3.4.0 Allow geometry arguments and two-point form omitting azimuth. Returns a point projected from a start point by a distance and bearing (azimuth).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Resample">ST_Resample</link> - Enhanced: 3.4.0 max and min resampling options added Resample a raster using a specified resampling algorithm, new dimensions, an arbitrary grid corner and a set of raster georeferencing attributes defined or borrowed from another raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Rescale">ST_Rescale</link> - Enhanced: 3.4.0 max and min resampling options added Resample a raster by adjusting only its scale (or pixel size). New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline, Lanczos, Max or Min resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ShortestLine">ST_ShortestLine</link> - Enhanced: 3.4.0 - support for geography. Returns the 2D shortest line between two geometries</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 3.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="PostGIS_Extensions_Upgrade">PostGIS_Extensions_Upgrade</link> - Changed: 3.4.0 to add target_version argument. Packages and upgrades PostGIS extensions (e.g. postgis_raster,postgis_topology, postgis_sfcgal) to given or latest version.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 3.3</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 3.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="TP_RemoveUnusedPrimitives">RemoveUnusedPrimitives</link> - Availability: 3.3.0 Removes topology primitives which not needed to define existing TopoGeometry objects.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DConvexHull">ST_3DConvexHull</link> - Availability: 3.3.0 Computes the 3D convex hull of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DUnion">ST_3DUnion</link> - Availability: 3.3.0 aggregate variant was added Perform 3D union.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsMARC21">ST_AsMARC21</link> - Availability: 3.3.0  Returns geometry as a MARC21/XML record with a geographic datafield (034).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromMARC21">ST_GeomFromMARC21</link> - Availability: 3.3.0, requires libxml2 2.6+ Takes MARC21/XML geographic data as input and returns a PostGIS geometry object.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Letters">ST_Letters</link> - Availability: 3.3.0 Returns the input letters rendered as geometry with a default start position at the origin and default text height of 100.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_OptimalAlphaShape">ST_OptimalAlphaShape</link> - Availability: 3.3.0 - requires SFCGAL &gt;= 1.4.1. Computes an Alpha-shape enclosing a geometry using an "optimal" alpha value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SimplifyPolygonHull">ST_SimplifyPolygonHull</link> - Availability: 3.3.0. Computes a simplifed topology-preserving outer or inner hull of a polygonal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_TriangulatePolygon">ST_TriangulatePolygon</link> - Availability: 3.3.0. Computes the constrained Delaunay triangulation of polygons</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_sfcgal_full_version">postgis_sfcgal_full_version</link> - Availability: 3.3.0 Returns the full version of SFCGAL in use including CGAL and Boost versions</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 3.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_ConcaveHull">ST_ConcaveHull</link> - Enhanced: 3.3.0, GEOS native implementation enabled for GEOS 3.11+ Computes a possibly concave geometry that contains all input geometry vertices</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineMerge">ST_LineMerge</link> - Enhanced: 3.3.0 accept a directed parameter. Return the lines formed by sewing together a MultiLineString.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 3.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="PostGIS_Extensions_Upgrade">PostGIS_Extensions_Upgrade</link> - Changed: 3.3.0 support for upgrades from any PostGIS version. Does not work on all systems. Packages and upgrades PostGIS extensions (e.g. postgis_raster,postgis_topology, postgis_sfcgal) to given or latest version.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 3.2</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 3.2</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="FindLayer">FindLayer</link> - Availability: 3.2.0 Returns a topology.layer record by different means.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="FindTopology">FindTopology</link> - Availability: 3.2.0 Returns a topology record by different means.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetFaceContainingPoint">GetFaceContainingPoint</link> - Availability: 3.2.0 Finds the face containing a point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsFlatGeobuf">ST_AsFlatGeobuf</link> - Availability: 3.2.0 Return a FlatGeobuf representation of a set of rows.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Contour">ST_Contour</link> - Availability: 3.2.0 Generates a set of vector contours from the provided raster band, using the GDAL contouring algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DumpSegments">ST_DumpSegments</link> - Availability: 3.2.0 Returns a set of geometry_dump rows for the segments in a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_FromFlatGeobuf">ST_FromFlatGeobuf</link> - Availability: 3.2.0 Reads FlatGeobuf data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_FromFlatGeobufToTable">ST_FromFlatGeobufToTable</link> - Availability: 3.2.0 Creates a table based on the structure of FlatGeobuf data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_InterpolateRaster">ST_InterpolateRaster</link> - Availability: 3.2.0 Interpolates a gridded surface based on an input set of 3-d points, using the X- and Y-values to position the points on the grid and the Z-value of the points as the surface elevation.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TG_ST_SRID">ST_SRID</link> - Availability: 3.2.0 Returns the spatial reference identifier for a topogeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Scroll">ST_Scroll</link> - Availability: 3.2.0 Change start point of a closed LineString.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetM">ST_SetM</link> - Availability: 3.2.0 Returns a geometry with the same X/Y coordinates as the input geometry, and values from the raster copied into the M dimension using the requested resample algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetZ">ST_SetZ</link> - Availability: 3.2.0 Returns a geometry with the same X/Y coordinates as the input geometry, and values from the raster copied into the Z dimension using the requested resample algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeom_addTopoGeom">TopoGeom_addTopoGeom</link> - Availability: 3.2 Adds element of a TopoGeometry to the definition of another TopoGeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ValidateTopologyRelation">ValidateTopologyRelation</link> - Availability: 3.2.0 Returns info about invalid topology relation records</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_gdal_vsi_options">postgis.gdal_vsi_options</link> - Availability: 3.2.0 A string configuration to set options used when working with an out-db raster.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 3.2</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="GetFaceByPoint">GetFaceByPoint</link> - Enhanced: 3.2.0 more efficient implementation and clearer contract, stops working with invalid topologies. Finds face intersecting a given point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterKMeans">ST_ClusterKMeans</link> - Enhanced: 3.2.0 Support for max_radius Window function that returns a cluster id for each input geometry using the K-means algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeValid">ST_MakeValid</link> - Enhanced: 3.2.0, added algorithm options, 'linework' and 'structure' which requires GEOS &gt;= 3.10.0. Attempts to make an invalid geometry valid without losing vertices.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsCentroid">ST_PixelAsCentroid</link> - Enhanced: 3.2.0 Faster now implemented in C. Returns the centroid (point geometry) of the area represented by a pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsCentroids">ST_PixelAsCentroids</link> - Enhanced: 3.2.0 Faster now implemented in C. Returns the centroid (point geometry) for each pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel. The point geometry is the centroid of the area represented by a pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Point">ST_Point</link> - Enhanced: 3.2.0 srid as an extra optional argument was added. Older installs require combining with ST_SetSRID to mark the srid on the geometry. Creates a Point with X, Y and SRID values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PointM">ST_PointM</link> - Enhanced: 3.2.0 srid as an extra optional argument was added. Older installs require combining with ST_SetSRID to mark the srid on the geometry. Creates a Point with X, Y, M and SRID values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PointZ">ST_PointZ</link> - Enhanced: 3.2.0 srid as an extra optional argument was added. Older installs require combining with ST_SetSRID to mark the srid on the geometry. Creates a Point with X, Y, Z and SRID values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PointZM">ST_PointZM</link> - Enhanced: 3.2.0 srid as an extra optional argument was added. Older installs require combining with ST_SetSRID to mark the srid on the geometry. Creates a Point with X, Y, Z, M and SRID values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemovePoint">ST_RemovePoint</link> - Enhanced: 3.2.0 Remove a point from a linestring.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemoveRepeatedPoints">ST_RemoveRepeatedPoints</link> - Enhanced: 3.2.0 Returns a version of a geometry with duplicate points removed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_StartPoint">ST_StartPoint</link> - Enhanced: 3.2.0 returns a point for all geometries. Prior behavior returns NULLs if input was not a LineString. Returns the first point of a LineString.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Value">ST_Value</link> - Enhanced: 3.2.0 resample optional argument was added. Returns the value of a given band in a given columnx, rowy pixel or at a particular geometric point. Band numbers start at 1 and assumed to be 1 if not specified. If exclude_nodata_value is set to false, then all pixels include nodata pixels are considered to intersect and return value. If exclude_nodata_value is not passed in then reads it from metadata of raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeo_AddLineString">TopoGeo_AddLineString</link> - Enhanced: 3.2.0 added support for returning signed identifier. Adds a linestring to an existing topology using a tolerance and possibly splitting existing edges/faces.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 3.2</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_Boundary">ST_Boundary</link> - Changed: 3.2.0 support for TIN, does not use geos, does not linearize curves Returns the boundary of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ValidateTopology">ValidateTopology</link> - Changed: 3.2.0 added optional bbox parameter, perform face labeling and edge linking checks. Returns a set of validatetopology_returntype objects detailing issues with topology.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 3.1</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 3.1</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_Hexagon">ST_Hexagon</link> - Availability: 3.1.0 Returns a single hexagon, using the provided edge size and cell coordinate within the hexagon grid space.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_HexagonGrid">ST_HexagonGrid</link> - Availability: 3.1.0 Returns a set of hexagons and cell indices that completely cover the bounds of the geometry argument.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MaximumInscribedCircle">ST_MaximumInscribedCircle</link> - Availability: 3.1.0. Computes the largest circle contained within a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ReducePrecision">ST_ReducePrecision</link> - Availability: 3.1.0. Returns a valid geometry with points rounded to a grid tolerance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Square">ST_Square</link> - Availability: 3.1.0 Returns a single square, using the provided edge size and cell coordinate within the square grid space.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SquareGrid">ST_SquareGrid</link> - Availability: 3.1.0 Returns a set of grid squares and cell indices that completely cover the bounds of the geometry argument.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 3.1</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_AsEWKT">ST_AsEWKT</link> - Enhanced: 3.1.0 support for optional precision parameter. Return the Well-Known Text (WKT) representation of the geometry with SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterKMeans">ST_ClusterKMeans</link> - Enhanced: 3.1.0 Support for 3D geometries and weights Window function that returns a cluster id for each input geometry using the K-means algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Difference">ST_Difference</link> - Enhanced: 3.1.0 accept a gridSize parameter. Computes a geometry representing the part of geometry A that does not intersect geometry B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersection">ST_Intersection</link> - Enhanced: 3.1.0 accept a gridSize parameter Computes a geometry representing the shared portion of geometries A and B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeValid">ST_MakeValid</link> - Enhanced: 3.1.0, added removal of Coordinates with NaN values. Attempts to make an invalid geometry valid without losing vertices.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Subdivide">ST_Subdivide</link> - Enhanced: 3.1.0 accept a gridSize parameter. Computes a rectilinear subdivision of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SymDifference">ST_SymDifference</link> - Enhanced: 3.1.0 accept a gridSize parameter. Computes a geometry representing the portions of geometries A and B that do not intersect.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_TileEnvelope">ST_TileEnvelope</link> - Enhanced: 3.1.0 Added margin parameter. Creates a rectangular Polygon in Web Mercator (SRID:3857) using the XYZ tile system.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_UnaryUnion">ST_UnaryUnion</link> - Enhanced: 3.1.0 accept a gridSize parameter. Computes the union of the components of a single geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Union">ST_Union</link> - Enhanced: 3.1.0 accept a gridSize parameter. Computes a geometry representing the point-set union of the input geometries.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 3.1</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_ST_Count">ST_Count</link> - Changed: 3.1.0 - The ST_Count(rastertable, rastercolumn, ...) variants removed. Use  instead. Returns the number of pixels in a given band of a raster or raster coverage. If no band is specified defaults to band 1. If exclude_nodata_value is set to true, will only count pixels that are not equal to the nodata value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3D">ST_Force3D</link> - Changed: 3.1.0. Added support for supplying a non-zero Z value. Force the geometries into XYZ mode. This is an alias for ST_Force3DZ.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3DM">ST_Force3DM</link> - Changed: 3.1.0. Added support for supplying a non-zero M value. Force the geometries into XYM mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3DZ">ST_Force3DZ</link> - Changed: 3.1.0. Added support for supplying a non-zero Z value. Force the geometries into XYZ mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_4D">ST_Force4D</link> - Changed: 3.1.0. Added support for supplying non-zero Z and M values. Force the geometries into XYZM mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Histogram">ST_Histogram</link> - Changed: 3.1.0 Removed ST_Histogram(table_name, column_name) variant.  Returns a set of record summarizing a raster or raster coverage data distribution separate bin ranges. Number of bins are autocomputed if not specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Quantile">ST_Quantile</link> - Changed: 3.1.0 Removed ST_Quantile(table_name, column_name) variant.  Compute quantiles for a raster or raster table coverage in the context of the sample or population. Thus, a value could be examined to be at the raster's 25%, 50%, 75% percentile.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SummaryStats">ST_SummaryStats</link> - Changed: 3.1.0 ST_SummaryStats(rastertable, rastercolumn, ...) variants are removed. Use  instead.  Returns summarystats consisting of count, sum, mean, stddev, min, max for a given raster band of a raster or raster coverage. Band 1 is assumed is no band is specified.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 3.0</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 3.0</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="CG_ConstrainedDelaunayTriangles">CG_ConstrainedDelaunayTriangles</link> - Availability: 3.0.0 Return a constrained Delaunay triangulation around the given input geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DLineInterpolatePoint">ST_3DLineInterpolatePoint</link> - Availability: 3.0.0 Returns a point interpolated along a 3D line at a fractional location.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ConstrainedDelaunayTriangles">ST_ConstrainedDelaunayTriangles</link> - Availability: 3.0.0 Return a constrained Delaunay triangulation around the given input geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_TileEnvelope">ST_TileEnvelope</link> - Availability: 3.0.0 Creates a rectangular Polygon in Web Mercator (SRID:3857) using the XYZ tile system.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 3.0</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_AsMVT">ST_AsMVT</link> - Enhanced: 3.0 - added support for Feature ID. Aggregate function returning a MVT representation of a set of rows.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Contains">ST_Contains</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if every point of B lies in A, and their interiors have a point in common</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ContainsProperly">ST_ContainsProperly</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if every point of B lies in the interior of A</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CoveredBy">ST_CoveredBy</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if every point of A lies in B</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Covers">ST_Covers</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if every point of B lies in A</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Crosses">ST_Crosses</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if two geometries have some, but not all, interior points in common</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CurveToLine">ST_CurveToLine</link> - Enhanced: 3.0.0 implemented a minimum number of segments per linearized arc to prevent topological collapse. Converts a geometry containing curves to a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Disjoint">ST_Disjoint</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if two geometries have no points in common</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Equals">ST_Equals</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if two geometries include the same set of points</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeneratePoints">ST_GeneratePoints</link> - Enhanced: 3.0.0, added seed parameter Generates a multipoint of random points contained in a Polygon or MultiPolygon.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGeoJSON">ST_GeomFromGeoJSON</link> - Enhanced: 3.0.0 parsed geometry defaults to SRID=4326 if not specified otherwise. Takes as input a geojson representation of a geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LocateBetween">ST_LocateBetween</link> - Enhanced: 3.0.0 - added support for POLYGON, TIN, TRIANGLE. Returns the portions of a geometry that match a measure range.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LocateBetweenElevations">ST_LocateBetweenElevations</link> - Enhanced: 3.0.0 - added support for POLYGON, TIN, TRIANGLE. Returns the portions of a geometry that lie in an elevation (Z) range.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Overlaps">ST_Overlaps</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if two geometries have the same dimension and intersect, but each has at least one point not in the other</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Relate">ST_Relate</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if two geometries have a topological relationship matching an Intersection Matrix pattern, or computes their Intersection Matrix</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Segmentize">ST_Segmentize</link> - Enhanced: 3.0.0 Segmentize geometry now produces equal-length subsegments Returns a modified geometry/geography having no segment longer than a given distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Touches">ST_Touches</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if two geometries have at least one point in common, but their interiors do not intersect</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Within">ST_Within</link> - Enhanced: 3.0.0 enabled support for GEOMETRYCOLLECTION Tests if every point of A lies in B, and their interiors have a point in common</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 3.0</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="PostGIS_Extensions_Upgrade">PostGIS_Extensions_Upgrade</link> - Changed: 3.0.0 to repackage loose extensions and support postgis_raster. Packages and upgrades PostGIS extensions (e.g. postgis_raster,postgis_topology, postgis_sfcgal) to given or latest version.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DDistance">ST_3DDistance</link> - Changed: 3.0.0 - SFCGAL version removed Returns the 3D cartesian minimum distance (based on spatial ref) between two geometries in projected units.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DIntersects">ST_3DIntersects</link> - Changed: 3.0.0 SFCGAL backend removed, GEOS backend supports TINs. Tests if two geometries spatially intersect in 3D - only for points, linestrings, polygons, polyhedral surface (area)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Area">ST_Area</link> - Changed: 3.0.0 - does not depend on SFCGAL anymore. Returns the area of a polygonal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Changed: 3.0.0 support records as input Return a geometry or feature in GeoJSON format.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Changed: 3.0.0 output SRID if not EPSG:4326. Return a geometry or feature in GeoJSON format.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsKML">ST_AsKML</link> - Changed: 3.0.0 - Removed the "versioned" variant signature Return the geometry as a KML element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance">ST_Distance</link> - Changed: 3.0.0 - does not depend on SFCGAL anymore. Returns the distance between two geometry or geography values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersection">ST_Intersection</link> - Changed: 3.0.0 does not depend on SFCGAL. Computes a geometry representing the shared portion of geometries A and B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersects">ST_Intersects</link> - Changed: 3.0.0 SFCGAL version removed and native support for 2D TINS added. Tests if two geometries intersect (they have at least one point in common)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Union">ST_Union</link> - Changed: 3.0.0 does not depend on SFCGAL. Computes a geometry representing the point-set union of the input geometries.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 2.5</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 2.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_QuantizeCoordinates">
+				ST_QuantizeCoordinates
+			</link> - Availability: 2.5.0 Sets least significant bits of coordinates to zero</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="PostGIS_Extensions_Upgrade">PostGIS_Extensions_Upgrade</link> - Availability: 2.5.0 Packages and upgrades PostGIS extensions (e.g. postgis_raster,postgis_topology, postgis_sfcgal) to given or latest version.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Angle">ST_Angle</link> - Availability: 2.5.0 Returns the angle between two vectors defined by 3 or 4 points, or 2 lines.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsHexWKB">ST_AsHexWKB</link> - Availability: 2.5.0  Return the Well-Known Binary (WKB) in Hex representation of the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_BandFileSize">ST_BandFileSize</link> - Availability: 2.5.0 Returns the file size of a band stored in file system. If no bandnum specified, 1 is assumed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_BandFileTimestamp">ST_BandFileTimestamp</link> - Availability: 2.5.0 Returns the file timestamp of a band stored in file system. If no bandnum specified, 1 is assumed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ChaikinSmoothing">ST_ChaikinSmoothing</link> - Availability: 2.5.0 Returns a smoothed version of a geometry, using the Chaikin algorithm</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_FilterByM">ST_FilterByM</link> - Availability: 2.5.0 Removes vertices based on their M value</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Grayscale">ST_Grayscale</link> - Availability: 2.5.0  Creates a new one-8BUI band raster from the source raster and specified bands representing Red, Green and Blue</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineInterpolatePoints">ST_LineInterpolatePoints</link> - Availability: 2.5.0 Returns points interpolated along a line at a fractional interval.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_OrientedEnvelope">ST_OrientedEnvelope</link> - 
+                Availability: 2.5.0.
+             Returns a minimum-area rectangle containing a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_RastFromHexWKB">ST_RastFromHexWKB</link> - Availability: 2.5.0 Return a raster value from a Hex representation of Well-Known Binary (WKB) raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_RastFromWKB">ST_RastFromWKB</link> - Availability: 2.5.0 Return a raster value from a Well-Known Binary (WKB) raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetBandIndex">ST_SetBandIndex</link> - Availability: 2.5.0 Update the external band number of an out-db band</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetBandPath">ST_SetBandPath</link> - Availability: 2.5.0 Update the external path and band number of an out-db band</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 2.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_GeometricMedian">
+              ST_GeometricMedian
+          </link> - Enhanced: 2.5.0 Added support for M as weight of points. Returns the geometric median of a MultiPoint.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsBinary">ST_AsBinary/ST_AsWKB</link> - Enhanced: 2.5.0 Addition of ST_AsWKB Return the Well-Known Binary (WKB) representation of the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsMVT">ST_AsMVT</link> - Enhanced: 2.5.0 - added support parallel query. Aggregate function returning a MVT representation of a set of rows.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsText">ST_AsText</link> - Enhanced: 2.5 - optional parameter precision introduced. Return the Well-Known Text (WKT) representation of the geometry/geography without SRID metadata.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_BandMetaData">ST_BandMetaData</link> - Enhanced: 2.5.0 to include outdbbandnum, filesize and filetimestamp for outdb rasters. Returns basic meta data for a specific raster band. band num 1 is assumed if none-specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Buffer">ST_Buffer</link> - Enhanced: 2.5.0 - ST_Buffer geometry support was enhanced to allow for side buffering specification side=both|left|right. Computes a geometry covering all points within a given distance from a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGeoJSON">ST_GeomFromGeoJSON</link> - Enhanced: 2.5.0 can now accept json and jsonb as inputs. Takes as input a geojson representation of a geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersects">ST_Intersects</link> - Enhanced: 2.5.0 Supports GEOMETRYCOLLECTION. Tests if two geometries intersect (they have at least one point in common)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_OffsetCurve">ST_OffsetCurve</link> - Enhanced: 2.5 - added support for GEOMETRYCOLLECTION and MULTILINESTRING Returns an offset line at a given distance and side from an input line.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Scale">ST_Scale</link> - Enhanced: 2.5.0 support for scaling relative to a local origin (origin parameter) was introduced. Scales a geometry by given factors.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Split">ST_Split</link> - Enhanced: 2.5.0 support for splitting a polygon by a multiline was introduced. Returns a collection of geometries created by splitting a geometry by another geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Subdivide">ST_Subdivide</link> - Enhanced: 2.5.0 reuses existing points on polygon split, vertex count is lowered from 8 to 5. Computes a rectilinear subdivision of a geometry.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 2.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_ST_GDALDrivers">ST_GDALDrivers</link> - Changed: 2.5.0 - add can_read and can_write columns. Returns a list of raster formats supported by PostGIS through GDAL. Only those formats with can_write=True can be used by ST_AsGDALRaster</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 2.4</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 2.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_ForcePolygonCCW">
+				ST_ForcePolygonCCW
+			</link> - Availability: 2.4.0 Orients all exterior rings counter-clockwise and all interior rings clockwise.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ForcePolygonCW">
+				ST_ForcePolygonCW
+			</link> - Availability: 2.4.0 Orients all exterior rings clockwise and all interior rings counter-clockwise.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsPolygonCCW">
+				ST_IsPolygonCCW
+			</link> - Availability: 2.4.0 Tests if Polygons have exterior rings oriented counter-clockwise and interior rings oriented clockwise.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsPolygonCW">
+				ST_IsPolygonCW
+			</link> - Availability: 2.4.0 Tests if Polygons have exterior rings oriented clockwise and interior rings oriented counter-clockwise.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGeobuf">ST_AsGeobuf</link> - Availability: 2.4.0 Return a Geobuf representation of a set of rows.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsMVT">ST_AsMVT</link> - Availability: 2.4.0 Aggregate function returning a MVT representation of a set of rows.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsMVTGeom">ST_AsMVTGeom</link> - Availability: 2.4.0 Transforms a geometry into the coordinate space of a MVT tile.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Centroid">ST_Centroid</link> - Availability: 2.4.0 support for geography was introduced. Returns the geometric center of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_FrechetDistance">ST_FrechetDistance</link> - Availability: 2.4.0 - requires GEOS &gt;= 3.7.0 Returns the Fréchet distance between two geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MakeEmptyCoverage">ST_MakeEmptyCoverage</link> - Availability: 2.4.0  Cover georeferenced area with a grid of empty raster tiles.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 2.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="Loader_Generate_Nation_Script">Loader_Generate_Nation_Script</link> - Enhanced: 2.4.1 zip code 5 tabulation area (zcta5) load step was fixed and when enabled, zcta5 data is loaded as a single table called zcta5_all as part of the nation script load. Generates a shell script for the specified platform that loads in the county and state lookup tables.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Normalize_Address">Normalize_Address</link> - Enhanced: 2.4.0 norm_addy object includes additional fields zip4 and address_alphanumeric. Given a textual street address, returns a composite norm_addy type that has road suffix, prefix and type standardized, street, streetname etc. broken into separate fields. This function will work with just the lookup data packaged with the tiger_geocoder (no need for tiger census data).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Pagc_Normalize_Address">Pagc_Normalize_Address</link> - Enhanced: 2.4.0 norm_addy object includes additional fields zip4 and address_alphanumeric. Given a textual street address, returns a composite norm_addy type that has road suffix, prefix and type standardized, street, streetname etc. broken into separate fields. This function will work with just the lookup data packaged with the tiger_geocoder (no need for tiger census data). Requires address_standardizer extension.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Reverse_Geocode">Reverse_Geocode</link> - Enhanced: 2.4.1 if optional zcta5 dataset is loaded, the reverse_geocode function can resolve to state and zip even if the specific state data is not loaded. Refer to  for details on loading zcta5 data. Takes a geometry point in a known spatial ref sys and returns a record containing an array of theoretically possible addresses and an array of cross streets. If include_strnum_range = true, includes the street range in the cross streets.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsTWKB">ST_AsTWKB</link> - Enhanced: 2.4.0 memory and speed improvements. Returns the geometry as TWKB, aka "Tiny Well-Known Binary"</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Covers">ST_Covers</link> - Enhanced: 2.4.0 Support for polygon in polygon and line in polygon added for geography type Tests if every point of B lies in A</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CurveToLine">ST_CurveToLine</link> - Enhanced: 2.4.0 added support for max-deviation and max-angle tolerance, and for symmetric output. Converts a geometry containing curves to a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Project">ST_Project</link> - Enhanced: 2.4.0 Allow negative distance and non-normalized azimuth. Returns a point projected from a start point by a distance and bearing (azimuth).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Reverse">ST_Reverse</link> - Enhanced: 2.4.0 support for curves was introduced. Return the geometry with vertex order reversed.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 2.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_Geometry_EQ">=</link> - Changed: 2.4.0, in prior versions this was bounding box equality not a geometric equality. If you need bounding box equality, use  instead. Returns TRUE if the coordinates and coordinate order geometry/geography A are the same as the coordinates and coordinate order of geometry/geography B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Node">ST_Node</link> - 
+Changed: 2.4.0 this function uses GEOSNode internally instead of GEOSUnaryUnion.
+This may cause the resulting linestrings to have a different order and direction compared to PostGIS &lt; 2.4.
+         Nodes a collection of lines.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 2.3</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 2.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_GeometricMedian">
+              ST_GeometricMedian
+          </link> - Availability: 2.3.0 Returns the geometric median of a MultiPoint.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="overlaps_nd_geometry_gidx">&amp;&amp;&amp;(geometry,gidx)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a geometry's (cached) n-D bounding box intersects a n-D float precision bounding box (GIDX).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="overlaps_nd_gidx_geometry">&amp;&amp;&amp;(gidx,geometry)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a n-D float precision bounding box (GIDX) intersects a geometry's (cached) n-D bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="overlaps_nd_gidx_gidx">&amp;&amp;&amp;(gidx,gidx)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if two n-D float precision bounding boxes (GIDX) intersect each other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="overlaps_box2df_box2df">&amp;&amp;(box2df,box2df)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if two 2D float precision bounding boxes (BOX2DF) intersect each other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="overlaps_box2df_geometry">&amp;&amp;(box2df,geometry)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a 2D float precision bounding box (BOX2DF) intersects a geometry's (cached) 2D bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="overlaps_geometry_box2df">&amp;&amp;(geometry,box2df)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a geometry's (cached) 2D bounding box intersects a 2D float precision bounding box (BOX2DF).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="is_contained_box2df_box2df">@(box2df,box2df)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a 2D float precision bounding box (BOX2DF) is contained into another 2D float precision bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="is_contained_box2df_geometry">@(box2df,geometry)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a 2D float precision bounding box (BOX2DF) is contained into a geometry's 2D bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="is_contained_geometry_box2df">@(geometry,box2df)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a geometry's 2D bounding box is contained into a 2D float precision bounding box (BOX2DF).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Populate_Topology_Layer">Populate_Topology_Layer</link> - Availability: 2.3.0 Adds missing entries to topology.layer table by reading metadata from topo tables.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterDBSCAN">ST_ClusterDBSCAN</link> - Availability: 2.3.0 Window function that returns a cluster id for each input geometry using the DBSCAN algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterKMeans">ST_ClusterKMeans</link> - Availability: 2.3.0 Window function that returns a cluster id for each input geometry using the K-means algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeneratePoints">ST_GeneratePoints</link> - Availability: 2.3.0 Generates a multipoint of random points contained in a Polygon or MultiPolygon.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeLine">ST_MakeLine</link> - Availability: 2.3.0 -  Support for MultiPoint input elements was introduced Creates a LineString from Point, MultiPoint, or LineString geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MinimumBoundingRadius">ST_MinimumBoundingRadius</link> - Availability - 2.3.0 Returns the center point and radius of the smallest circle that contains a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MinimumClearance">ST_MinimumClearance</link> - Availability: 2.3.0 Returns the minimum clearance of a geometry, a measure of a geometry's robustness.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MinimumClearanceLine">ST_MinimumClearanceLine</link> - Availability: 2.3.0 - requires GEOS &gt;= 3.6.0 Returns the two-point LineString spanning a geometry's minimum clearance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Normalize">ST_Normalize</link> - Availability: 2.3.0 Return the geometry in its canonical form.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Points">ST_Points</link> - Availability: 2.3.0 Returns a MultiPoint containing the coordinates of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_VoronoiLines">ST_VoronoiLines</link> - Availability: 2.3.0 Returns the boundaries of the Voronoi diagram of the vertices of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_VoronoiPolygons">ST_VoronoiPolygons</link> - Availability: 2.3.0 Returns the cells of the Voronoi diagram of the vertices of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_WrapX">ST_WrapX</link> - Availability: 2.3.0 requires GEOS Wrap a geometry around an X value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeom_addElement">TopoGeom_addElement</link> - Availability: 2.3 Adds an element to the definition of a TopoGeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeom_remElement">TopoGeom_remElement</link> - Availability: 2.3 Removes an element from the definition of a TopoGeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="contains_box2df_box2df">~(box2df,box2df)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a 2D float precision bounding box (BOX2DF) contains another 2D float precision bounding box (BOX2DF).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="contains_box2df_geometry">~(box2df,geometry)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a 2D float precision bounding box (BOX2DF) contains a geometry's 2D bonding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="contains_geometry_box2df">~(geometry,box2df)</link> - Availability: 2.3.0 support for Block Range INdexes (BRIN) was introduced. Requires PostgreSQL 9.5+. Returns TRUE if a geometry's 2D bonding box contains a 2D float precision bounding box (GIDX).</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 2.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_Contains">ST_Contains</link> - Enhanced: 2.3.0 Enhancement to PIP short-circuit extended to support MultiPoints with few points. Prior versions only supported point in polygon. Tests if every point of B lies in A, and their interiors have a point in common</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Covers">ST_Covers</link> - Enhanced: 2.3.0 Enhancement to PIP short-circuit for geometry extended to support MultiPoints with few points. Prior versions only supported point in polygon. Tests if every point of B lies in A</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Expand">ST_Expand</link> - Enhanced: 2.3.0 support was added to expand a box by different amounts in different dimensions. Returns a bounding box expanded from another bounding box or a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersects">ST_Intersects</link> - Enhanced: 2.3.0 Enhancement to PIP short-circuit extended to support MultiPoints with few points. Prior versions only supported point in polygon. Tests if two geometries intersect (they have at least one point in common)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Segmentize">ST_Segmentize</link> - Enhanced: 2.3.0 Segmentize geography now produces equal-length subsegments Returns a modified geometry/geography having no segment longer than a given distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Transform">ST_Transform</link> - Enhanced: 2.3.0 support for direct PROJ.4 text was introduced. Return a new geometry with coordinates transformed to a different spatial reference system.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Within">ST_Within</link> - Enhanced: 2.3.0 Enhancement to PIP short-circuit for geometry extended to support MultiPoints with few points. Prior versions only supported point in polygon. Tests if every point of A lies in B, and their interiors have a point in common</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 2.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_PointN">ST_PointN</link> -  Changed: 2.3.0 : negative indexing available (-1 is last point)
+     Returns the Nth point in the first LineString or circular LineString in a geometry.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 2.2</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 2.2</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="geometry_distance_centroid_nd">&lt;&lt;-&gt;&gt;</link> - Availability: 2.2.0 -- KNN only available for PostgreSQL 9.1+ Returns the n-D distance between the A and B geometries or bounding boxes</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DDifference">ST_3DDifference</link> - Availability: 2.2.0 Perform 3D difference</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DUnion">ST_3DUnion</link> - Availability: 2.2.0 Perform 3D union.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ApproximateMedialAxis">ST_ApproximateMedialAxis</link> - Availability: 2.2.0 Compute the approximate medial axis of an areal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsEncodedPolyline">ST_AsEncodedPolyline</link> - Availability: 2.2.0 Returns an Encoded Polyline from a LineString geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsTWKB">ST_AsTWKB</link> - Availability: 2.2.0 Returns the geometry as TWKB, aka "Tiny Well-Known Binary"</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_BoundingDiagonal">ST_BoundingDiagonal</link> - Availability: 2.2.0 Returns the diagonal of a geometry's bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CPAWithin">ST_CPAWithin</link> - Availability: 2.2.0 Tests if the closest point of approach of two trajectoriesis within the specified distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClipByBox2D">ST_ClipByBox2D</link> - Availability: 2.2.0 Computes the portion of a geometry falling within a rectangle.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClosestPointOfApproach">ST_ClosestPointOfApproach</link> - Availability: 2.2.0 Returns a measure at the closest point of approach of two trajectories.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterIntersecting">ST_ClusterIntersecting</link> - Availability: 2.2.0 Aggregate function that clusters input geometries into connected sets.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClusterWithin">ST_ClusterWithin</link> - Availability: 2.2.0 Aggregate function that clusters geometries by separation distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_CountAgg">ST_CountAgg</link> - Availability: 2.2.0  Aggregate. Returns the number of pixels in a given band of a set of rasters. If no band is specified defaults to band 1. If exclude_nodata_value is set to true, will only count pixels that are not equal to the NODATA value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_CreateOverview">ST_CreateOverview</link> - Availability: 2.2.0 Create an reduced resolution version of a given raster coverage.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DistanceCPA">ST_DistanceCPA</link> - Availability: 2.2.0 Returns the distance between the closest point of approach of two trajectories.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ForceCurve">ST_ForceCurve</link> - Availability: 2.2.0 Upcast a geometry into its curved type, if applicable.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsPlanar">ST_IsPlanar</link> - Availability: 2.2.0: This was documented in 2.1.0 but got accidentally left out in 2.1 release. Check if a surface is or not planar</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsSolid">ST_IsSolid</link> - Availability: 2.2.0 Test if the geometry is a solid. No validity check is performed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsValidTrajectory">ST_IsValidTrajectory</link> - Availability: 2.2.0 Tests if the geometry is a valid trajectory.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineFromEncodedPolyline">ST_LineFromEncodedPolyline</link> - Availability: 2.2.0 Creates a LineString from an Encoded Polyline.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeSolid">ST_MakeSolid</link> - Availability: 2.2.0 Cast the geometry into a solid. No check is performed. To obtain a valid solid, the input geometry must be a closed Polyhedral Surface or a closed TIN.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebra">ST_MapAlgebra (callback function version)</link> - Availability: 2.2.0: Ability to add a mask Callback function version - Returns a one-band raster given one or more input rasters, band indexes and one user-specified callback function.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MemSize">ST_MemSize</link> - Availability: 2.2.0 Returns the amount of space (in bytes) the raster takes.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemoveRepeatedPoints">ST_RemoveRepeatedPoints</link> - Availability: 2.2.0 Returns a version of a geometry with duplicate points removed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_Retile">ST_Retile</link> - Availability: 2.2.0 Return a set of configured tiles from an arbitrarily tiled raster coverage.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SetEffectiveArea">ST_SetEffectiveArea</link> - Availability: 2.2.0 Sets the effective area for each vertex, using the Visvalingam-Whyatt algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SimplifyVW">ST_SimplifyVW</link> - Availability: 2.2.0 Returns a simplified representation of a geometry, using the Visvalingam-Whyatt algorithm</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Subdivide">ST_Subdivide</link> - Availability: 2.2.0 Computes a rectilinear subdivision of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SummaryStatsAgg">ST_SummaryStatsAgg</link> - Availability: 2.2.0  Aggregate. Returns summarystats consisting of count, sum, mean, stddev, min, max for a given raster band of a set of raster. Band 1 is assumed is no band is specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SwapOrdinates">ST_SwapOrdinates</link> - Availability: 2.2.0 Returns a version of the given geometry with given ordinate values swapped.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Volume">ST_Volume</link> - Availability: 2.2.0 Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="parse_address">parse_address</link> - Availability: 2.2.0 Takes a 1 line address and breaks into parts</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_enable_outdb_rasters">postgis.enable_outdb_rasters</link> - Availability: 2.2.0 A boolean configuration option to enable access to out-db raster bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_gdal_datapath">postgis.gdal_datapath</link> - Availability: 2.2.0 A configuration option to assign the value of GDAL's GDAL_DATA option. If not set, the environmentally set GDAL_DATA variable is used.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_gdal_enabled_drivers">postgis.gdal_enabled_drivers</link> - Availability: 2.2.0 A configuration option to set the enabled GDAL drivers in the PostGIS environment. Affects the GDAL configuration variable GDAL_SKIP.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="standardize_address">standardize_address</link> - Availability: 2.2.0 Returns an stdaddr form of an input address utilizing lex, gaz, and rule tables.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="geometry_distance_cpa">|=|</link> - Availability: 2.2.0. Index-supported only available for PostgreSQL 9.5+ Returns the distance between A and B trajectories at their closest point of approach.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 2.2</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="geometry_distance_knn">&lt;-&gt;</link> - Enhanced: 2.2.0 -- True KNN ("K nearest neighbor") behavior for geometry and geography for PostgreSQL 9.5+. Note for geography KNN is based on sphere rather than spheroid.  For PostgreSQL 9.4 and below, geography support is new but only supports centroid box. Returns the 2D distance between A and B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AsTopoJSON">AsTopoJSON</link> - Enhanced: 2.2.1 added support for puntal inputs Returns the TopoJSON representation of a topogeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Area">ST_Area</link> - Enhanced: 2.2.0 - measurement on spheroid performed with GeographicLib for improved accuracy and robustness.  Requires PROJ &gt;= 4.9.0 to take advantage of the new feature. Returns the area of a polygonal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsX3D">ST_AsX3D</link> - Enhanced: 2.2.0: Support for GeoCoordinates and axis (x/y, long/lat) flipping.  Look at options for details. Returns a Geometry in X3D xml node element format: ISO-IEC-19776-1.2-X3DEncodings-XML</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Azimuth">ST_Azimuth</link> - Enhanced: 2.2.0 measurement on spheroid performed with GeographicLib for improved accuracy and robustness.  Requires PROJ &gt;= 4.9.0 to take advantage of the new feature. Returns the north-based azimuth of a line between two points.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance">ST_Distance</link> - Enhanced: 2.2.0 - measurement on spheroid performed with GeographicLib for improved accuracy and robustness. Requires PROJ &gt;= 4.9.0 to take advantage of the new feature. Returns the distance between two geometry or geography values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Scale">ST_Scale</link> - Enhanced: 2.2.0 support for scaling all dimension (factor parameter) was introduced. Scales a geometry by given factors.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Split">ST_Split</link> - Enhanced: 2.2.0 support for splitting a line by a multiline, a multipoint or (multi)polygon boundary was introduced. Returns a collection of geometries created by splitting a geometry by another geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Summary">ST_Summary</link> - Enhanced: 2.2.0 Added support for TIN and Curves Returns a text summary of the contents of a geometry.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 2.2</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="geometry_distance_knn">&lt;-&gt;</link> - Changed: 2.2.0 -- For PostgreSQL 9.5 users, old Hybrid syntax may be slower, so you'll want to get rid of that hack if you are running your code only on PostGIS 2.2+ 9.5+.  See examples below. Returns the 2D distance between A and B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Get_Geocode_Setting">Get_Geocode_Setting</link> - Changed: 2.2.0 : default settings are now kept in a table called geocode_settings_default. Use customized settingsa are in geocode_settings and only contain those that have been set by user. Returns value of specific setting stored in tiger.geocode_settings table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DClosestPoint">ST_3DClosestPoint</link> - Changed: 2.2.0 - if 2 2D geometries are input, a 2D point is returned (instead of old behavior assuming 0 for missing Z). In case of 2D and 3D, Z is no longer assumed to be 0 for missing Z. Returns the 3D point on g1 that is closest to g2. This is the first point of the 3D shortest line.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DDistance">ST_3DDistance</link> - Changed: 2.2.0 - In case of 2D and 3D, Z is no longer assumed to be 0 for missing Z. Returns the 3D cartesian minimum distance (based on spatial ref) between two geometries in projected units.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DLongestLine">ST_3DLongestLine</link> - Changed: 2.2.0 - if 2 2D geometries are input, a 2D point is returned (instead of old behavior assuming 0 for missing Z). In case of 2D and 3D, Z is no longer assumed to be 0 for missing Z. Returns the 3D longest line between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DMaxDistance">ST_3DMaxDistance</link> - Changed: 2.2.0 - In case of 2D and 3D, Z is no longer assumed to be 0 for missing Z. Returns the 3D cartesian maximum distance (based on spatial ref) between two geometries in projected units.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DShortestLine">ST_3DShortestLine</link> - Changed: 2.2.0 - if 2 2D geometries are input, a 2D point is returned (instead of old behavior assuming 0 for missing Z). In case of 2D and 3D, Z is no longer assumed to be 0 for missing Z. Returns the 3D shortest line between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DistanceSphere">ST_DistanceSphere</link> - Changed: 2.2.0 In prior versions this used to be called ST_Distance_Sphere Returns minimum distance in meters between two lon/lat geometries using a spherical earth model.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance_Spheroid">ST_DistanceSpheroid</link> - Changed: 2.2.0 In prior versions this was called ST_Distance_Spheroid Returns the minimum distance between two lon/lat geometries using a spheroidal earth model.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Equals">ST_Equals</link> - Changed: 2.2.0 Returns true even for invalid geometries if they are binary equal Tests if two geometries include the same set of points</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Length_Spheroid">ST_LengthSpheroid</link> - Changed: 2.2.0 In prior versions this was called ST_Length_Spheroid and had the alias ST_3DLength_Spheroid Returns the 2D or 3D length/perimeter of a lon/lat geometry on a spheroid.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MemSize">ST_MemSize</link> - Changed: 2.2.0 name changed to ST_MemSize to follow naming convention. Returns the amount of memory space a geometry takes.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PointInsideCircle">ST_PointInsideCircle</link> - Changed: 2.2.0 In prior versions this was called ST_Point_Inside_Circle Tests if a point geometry is inside a circle defined by a center and radius</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ValidateTopology">ValidateTopology</link> - Changed: 2.2.0 values for id1 and id2 were swapped for 'edge crosses node' to be consistent with error description. Returns a set of validatetopology_returntype objects detailing issues with topology.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 2.1</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 2.1</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_Raster_EQ">=</link> - Availability:  2.1.0  Returns TRUE if A's bounding box is the same as B's. Uses double precision bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AsTopoJSON">AsTopoJSON</link> - Availability: 2.1.0  Returns the TopoJSON representation of a topogeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Drop_Nation_Tables_Generate_Script">Drop_Nation_Tables_Generate_Script</link> - Availability: 2.1.0 Generates a script that drops all tables in the specified schema that start with county_all, state_all or state code followed by county or state.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Get_Geocode_Setting">Get_Geocode_Setting</link> - Availability: 2.1.0 Returns value of specific setting stored in tiger.geocode_settings table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Loader_Generate_Nation_Script">Loader_Generate_Nation_Script</link> - Availability: 2.1.0  Generates a shell script for the specified platform that loads in the county and state lookup tables.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Pagc_Normalize_Address">Pagc_Normalize_Address</link> - Availability: 2.1.0 Given a textual street address, returns a composite norm_addy type that has road suffix, prefix and type standardized, street, streetname etc. broken into separate fields. This function will work with just the lookup data packaged with the tiger_geocoder (no need for tiger census data). Requires address_standardizer extension.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DArea">ST_3DArea</link> - Availability: 2.1.0 Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DIntersection">ST_3DIntersection</link> - Availability: 2.1.0 Perform 3D intersection</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Box2dFromGeoHash">ST_Box2dFromGeoHash</link> - Availability: 2.1.0 Return a BOX2D from a GeoHash string.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_ColorMap">ST_ColorMap</link> - Availability: 2.1.0  Creates a new raster of up to four 8BUI bands (grayscale, RGB, RGBA) from the source raster and a specified band. Band 1 is assumed if not specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Contains">ST_Contains</link> - Availability: 2.1.0 Return true if no points of raster rastB lie in the exterior of raster rastA and at least one point of the interior of rastB lies in the interior of rastA.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_ContainsProperly">ST_ContainsProperly</link> - Availability: 2.1.0 Return true if rastB intersects the interior of rastA but not the boundary or exterior of rastA.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_CoveredBy">ST_CoveredBy</link> - Availability: 2.1.0 Return true if no points of raster rastA lie outside raster rastB.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Covers">ST_Covers</link> - Availability: 2.1.0 Return true if no points of raster rastB lie outside raster rastA.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_DFullyWithin">ST_DFullyWithin</link> - Availability: 2.1.0 Return true if rasters rastA and rastB are fully within the specified distance of each other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_DWithin">ST_DWithin</link> - Availability: 2.1.0 Return true if rasters rastA and rastB are within the specified distance of each other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DelaunayTriangles">ST_DelaunayTriangles</link> - Availability: 2.1.0 Returns the Delaunay triangulation of the vertices of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Disjoint">ST_Disjoint</link> - Availability: 2.1.0 Return true if raster rastA does not spatially intersect rastB.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_DumpValues">ST_DumpValues</link> - Availability: 2.1.0 Get the values of the specified band as a 2-dimension array.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Extrude">ST_Extrude</link> - Availability: 2.1.0 Extrude a surface to a related volume</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ForceLHR">ST_ForceLHR</link> - Availability: 2.1.0 Force LHR orientation</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_FromGDALRaster">ST_FromGDALRaster</link> - Availability: 2.1.0 Returns a raster from a supported GDAL raster file.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGeoHash">ST_GeomFromGeoHash</link> - Availability: 2.1.0 Return a geometry from a GeoHash string.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_InvDistWeight4ma">ST_InvDistWeight4ma</link> - Availability: 2.1.0 Raster processing function that interpolates a pixel's value from the pixel's neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebra">ST_MapAlgebra (callback function version)</link> - Availability: 2.1.0 Callback function version - Returns a one-band raster given one or more input rasters, band indexes and one user-specified callback function.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebra_expr">ST_MapAlgebra (expression version)</link> - Availability: 2.1.0 Expression version - Returns a one-band raster given one or two input rasters, band indexes and one or more user-specified SQL expressions.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MinConvexHull">ST_MinConvexHull</link> - Availability: 2.1.0  Return the convex hull geometry of the raster excluding NODATA pixels.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MinDist4ma">ST_MinDist4ma</link> - Availability: 2.1.0 Raster processing function that returns the minimum distance (in number of pixels) between the pixel of interest and a neighboring pixel with value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MinkowskiSum">ST_MinkowskiSum</link> - Availability: 2.1.0 Performs Minkowski sum</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_NearestValue">ST_NearestValue</link> - Availability: 2.1.0 Returns the nearest non-NODATA value of a given band's pixel specified by a columnx and rowy or a geometric point expressed in the same spatial reference coordinate system as the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Neighborhood">ST_Neighborhood</link> - Availability: 2.1.0 Returns a 2-D double precision array of the non-NODATA values around a given band's pixel specified by either a columnX and rowY or a geometric point expressed in the same spatial reference coordinate system as the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_NotSameAlignmentReason">ST_NotSameAlignmentReason</link> - Availability: 2.1.0 Returns text stating if rasters are aligned and if not aligned, a reason why.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Orientation">ST_Orientation</link> - Availability: 2.1.0 Determine surface orientation</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Overlaps">ST_Overlaps</link> - Availability: 2.1.0 Return true if raster rastA and rastB intersect but one does not completely contain the other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsCentroid">ST_PixelAsCentroid</link> - Availability: 2.1.0 Returns the centroid (point geometry) of the area represented by a pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsCentroids">ST_PixelAsCentroids</link> - Availability: 2.1.0 Returns the centroid (point geometry) for each pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel. The point geometry is the centroid of the area represented by a pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPoint">ST_PixelAsPoint</link> - Availability: 2.1.0 Returns a point geometry of the pixel's upper-left corner.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPoints">ST_PixelAsPoints</link> - Availability: 2.1.0 Returns a point geometry for each pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel. The coordinates of the point geometry are of the pixel's upper-left corner.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelOfValue">ST_PixelOfValue</link> - Availability: 2.1.0 Get the columnx, rowy coordinates of the pixel whose value equals the search value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PointFromGeoHash">ST_PointFromGeoHash</link> - Availability: 2.1.0 Return a point from a GeoHash string.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_RasterToWorldCoord">ST_RasterToWorldCoord</link> - Availability: 2.1.0 Returns the raster's upper left corner as geometric X and Y (longitude and latitude) given a column and row. Column and row starts at 1.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Resize">ST_Resize</link> - Availability: 2.1.0  Requires GDAL 1.6.1+ Resize a raster to a new width/height</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Roughness">ST_Roughness</link> - Availability: 2.1.0 Returns a raster with the calculated "roughness" of a DEM.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetValues">ST_SetValues</link> - Availability: 2.1.0 Returns modified raster resulting from setting the values of a given band.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TP_ST_Simplify">ST_Simplify</link> - Availability: 2.1.0 Returns a "simplified" geometry version of the given TopoGeometry using the Douglas-Peucker algorithm.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_StraightSkeleton">ST_StraightSkeleton</link> - Availability: 2.1.0 Compute a straight skeleton from a geometry</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Summary">ST_Summary</link> - Availability: 2.1.0 Returns a text summary of the contents of the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_TPI">ST_TPI</link> - Availability: 2.1.0 Returns a raster with the calculated Topographic Position Index.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_TRI">ST_TRI</link> - Availability: 2.1.0 Returns a raster with the calculated Terrain Ruggedness Index.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Tesselate">ST_Tesselate</link> - Availability: 2.1.0 Perform surface Tessellation of a polygon or polyhedralsurface and returns as a TIN or collection of TINS</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Tile">ST_Tile</link> - Availability: 2.1.0 Returns a set of rasters resulting from the split of the input raster based upon the desired dimensions of the output rasters.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Touches">ST_Touches</link> - Availability: 2.1.0 Return true if raster rastA and rastB have at least one point in common but their interiors do not intersect.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Union">ST_Union</link> - Availability: 2.1.0 ST_Union(rast, unionarg) variant was introduced. Returns the union of a set of raster tiles into a single raster composed of 1 or more bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Within">ST_Within</link> - Availability: 2.1.0 Return true if no points of raster rastA lie in the exterior of raster rastB and at least one point of the interior of rastA lies in the interior of rastB.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_WorldToRasterCoord">ST_WorldToRasterCoord</link> - Availability: 2.1.0 Returns the upper left corner as column and row given geometric X and Y (longitude and latitude) or a point geometry expressed in the spatial reference coordinate system of the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Set_Geocode_Setting">Set_Geocode_Setting</link> - Availability: 2.1.0 Sets a setting that affects behavior of geocoder functions.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_UpdateRasterSRID">UpdateRasterSRID</link> - Availability: 2.1.0 Change the SRID of all rasters in the user-specified column and table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="clearTopoGeom">clearTopoGeom</link> - Availability: 2.1 Clears the content of a topo geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_backend">postgis.backend</link> - Availability: 2.1.0 The backend to service a function where GEOS and SFCGAL overlap. Options: geos or sfcgal. Defaults to geos.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="postgis_sfcgal_version">postgis_sfcgal_version</link> - Availability: 2.1.0 Returns the version of SFCGAL in use</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 2.1</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_ST_AddBand">ST_AddBand</link> - Enhanced: 2.1.0 support for addbandarg added. Returns a raster with the new band(s) of given type added with given initial value in the given index location. If no index is specified, the band is added to the end.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AddBand">ST_AddBand</link> - Enhanced: 2.1.0 support for new out-db bands added. Returns a raster with the new band(s) of given type added with given initial value in the given index location. If no index is specified, the band is added to the end.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsBinary">ST_AsBinary/ST_AsWKB</link> - Enhanced: 2.1.0 Addition of outasin Return the Well-Known Binary (WKB) representation of the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Enhanced: 2.1.0 id support was introduced, for GML 3. Return the geometry as a GML version 2 or 3 element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Aspect">ST_Aspect</link> - Enhanced: 2.1.0 Uses ST_MapAlgebra() and added optional interpolate_nodata function parameter Returns the aspect (in degrees by default) of an elevation raster band. Useful for analyzing terrain.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Boundary">ST_Boundary</link> - Enhanced: 2.1.0 support for Triangle was introduced Returns the boundary of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Clip">ST_Clip</link> - Enhanced: 2.1.0 Rewritten in C Returns the raster clipped by the input geometry. If band number is not specified, all bands are processed. If crop is not specified or TRUE, the output raster is cropped. If touched is set to TRUE, then touched pixels are included, otherwise only if the center of the pixel is in the geometry it is included.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DWithin">ST_DWithin</link> - Enhanced: 2.1.0 improved speed for geography. See Making Geography faster for details. Tests if two geometries are within a given distance</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DWithin">ST_DWithin</link> - Enhanced: 2.1.0 support for curved geometries was introduced. Tests if two geometries are within a given distance</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance">ST_Distance</link> - Enhanced: 2.1.0 improved speed for geography. See Making Geography faster for details. Returns the distance between two geometry or geography values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance">ST_Distance</link> - Enhanced: 2.1.0 - support for curved geometries was introduced. Returns the distance between two geometry or geography values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Distinct4ma">ST_Distinct4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the number of unique pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DumpPoints">ST_DumpPoints</link> - Enhanced: 2.1.0 Faster speed. Reimplemented as native-C. Returns a set of geometry_dump rows for the coordinates in a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_HillShade">ST_HillShade</link> - Enhanced: 2.1.0 Uses ST_MapAlgebra() and added optional interpolate_nodata function parameter Returns the hypothetical illumination of an elevation raster band using provided azimuth, altitude, brightness and scale inputs.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeValid">ST_MakeValid</link> - Enhanced: 2.1.0, added support for GEOMETRYCOLLECTION and MULTIPOINT. Attempts to make an invalid geometry valid without losing vertices.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Max4ma">ST_Max4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the maximum pixel value in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Mean4ma">ST_Mean4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the mean pixel value in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Min4ma">ST_Min4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the minimum pixel value in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPolygons">ST_PixelAsPolygons</link> - Enhanced: 2.1.0 exclude_nodata_value optional argument was added. Returns the polygon geometry that bounds every pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Polygon">ST_Polygon</link> - Enhanced: 2.1.0 Improved Speed (fully C-Based) and the returning multipolygon is ensured to be valid. Returns a multipolygon geometry formed by the union of pixels that have a pixel value that is not no data value. If no band number is specified, band num defaults to 1.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Range4ma">ST_Range4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the range of pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SameAlignment">ST_SameAlignment</link> - Enhanced: 2.1.0 addition of Aggegrate variant Returns true if rasters have same skew, scale, spatial ref, and offset (pixels can be put on same grid without cutting into pixels) and false if they don't with notice detailing issue.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Segmentize">ST_Segmentize</link> - Enhanced: 2.1.0 support for geography was introduced. Returns a modified geometry/geography having no segment longer than a given distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetGeoReference">ST_SetGeoReference</link> - Enhanced: 2.1.0 Addition of ST_SetGeoReference(raster, double precision, ...) variant Set Georeference 6 georeference parameters in a single call. Numbers should be separated by white space. Accepts inputs in GDAL or ESRI format. Default is GDAL.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetValue">ST_SetValue</link> - Enhanced: 2.1.0 Geometry variant of ST_SetValue() now supports any geometry type, not just point. The geometry variant is a wrapper around the geomval[] variant of ST_SetValues() Returns modified raster resulting from setting the value of a given band in a given columnx, rowy pixel or the pixels that intersect a particular geometry. Band numbers start at 1 and assumed to be 1 if not specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Slope">ST_Slope</link> - Enhanced: 2.1.0 Uses ST_MapAlgebra() and added optional units, scale, interpolate_nodata function parameters Returns the slope (in degrees by default) of an elevation raster band. Useful for analyzing terrain.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_StdDev4ma">ST_StdDev4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the standard deviation of pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Sum4ma">ST_Sum4ma</link> - Enhanced: 2.1.0 Addition of Variant 2 Raster processing function that calculates the sum of all pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Summary">ST_Summary</link> - Enhanced: 2.1.0 S flag to denote if has a known spatial reference system Returns a text summary of the contents of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Transform">ST_Transform</link> - Enhanced: 2.1.0 Addition of ST_Transform(rast, alignto) variant Reprojects a raster in a known spatial reference system to another known spatial reference system using specified resampling algorithm. Options are NearestNeighbor, Bilinear, Cubic, CubicSpline, Lanczos defaulting to NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Union">ST_Union</link> - Enhanced: 2.1.0 Improved Speed (fully C-Based). Returns the union of a set of raster tiles into a single raster composed of 1 or more bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Union">ST_Union</link> - Enhanced: 2.1.0 ST_Union(rast) (variant 1) unions all bands of all input rasters.  Prior versions of PostGIS assumed the first band. Returns the union of a set of raster tiles into a single raster composed of 1 or more bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Union">ST_Union</link> - Enhanced: 2.1.0 ST_Union(rast, uniontype) (variant 4) unions all bands of all input rasters. Returns the union of a set of raster tiles into a single raster composed of 1 or more bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="toTopoGeom">toTopoGeom</link> - Enhanced: 2.1.0 adds the version taking an existing TopoGeometry. Converts a simple Geometry into a topo geometry.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 2.1</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_ST_Aspect">ST_Aspect</link> - Changed: 2.1.0 In prior versions, return values were in radians. Now, return values default to degrees Returns the aspect (in degrees by default) of an elevation raster band. Useful for analyzing terrain.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_EstimatedExtent">ST_EstimatedExtent</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Estimated_Extent. Returns the estimated extent of a spatial table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force2D">ST_Force2D</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Force_2D. Force the geometries into a "2-dimensional mode".</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3D">ST_Force3D</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Force_3D. Force the geometries into XYZ mode. This is an alias for ST_Force3DZ.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3DM">ST_Force3DM</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Force_3DM. Force the geometries into XYM mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3DZ">ST_Force3DZ</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Force_3DZ. Force the geometries into XYZ mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_4D">ST_Force4D</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Force_4D. Force the geometries into XYZM mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_Collection">ST_ForceCollection</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Force_Collection. Convert the geometry into a GEOMETRYCOLLECTION.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_HillShade">ST_HillShade</link> - Changed: 2.1.0 In prior versions, azimuth and altitude were expressed in radians. Now, azimuth and altitude are expressed in degrees Returns the hypothetical illumination of an elevation raster band using provided azimuth, altitude, brightness and scale inputs.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineInterpolatePoint">ST_LineInterpolatePoint</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Line_Interpolate_Point. Returns a point interpolated along a line at a fractional location.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineLocatePoint">ST_LineLocatePoint</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Line_Locate_Point. Returns the fractional location of the closest point on a line to a point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineSubstring">ST_LineSubstring</link> - Changed: 2.1.0. Up to 2.0.x this was called ST_Line_Substring. Returns the part of a line between two fractional locations.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsCentroids">ST_PixelAsCentroids</link> - Changed: 2.1.1 Changed behavior of exclude_nodata_value. Returns the centroid (point geometry) for each pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel. The point geometry is the centroid of the area represented by a pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPoints">ST_PixelAsPoints</link> - Changed: 2.1.1 Changed behavior of exclude_nodata_value. Returns a point geometry for each pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel. The coordinates of the point geometry are of the pixel's upper-left corner.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPolygons">ST_PixelAsPolygons</link> - Changed: 2.1.1 Changed behavior of exclude_nodata_value. Returns the polygon geometry that bounds every pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Polygon">ST_Polygon</link> - Changed: 2.1.0 In prior versions would sometimes return a polygon, changed to always return multipolygon. Returns a multipolygon geometry formed by the union of pixels that have a pixel value that is not no data value. If no band number is specified, band num defaults to 1.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_RasterToWorldCoordX">ST_RasterToWorldCoordX</link> - Changed: 2.1.0 In prior versions, this was called ST_Raster2WorldCoordX Returns the geometric X coordinate upper left of a raster, column and row. Numbering of columns and rows starts at 1.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_RasterToWorldCoordY">ST_RasterToWorldCoordY</link> - Changed: 2.1.0 In prior versions, this was called ST_Raster2WorldCoordY Returns the geometric Y coordinate upper left corner of a raster, column and row. Numbering of columns and rows starts at 1.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Rescale">ST_Rescale</link> - Changed: 2.1.0 Works on rasters with no SRID Resample a raster by adjusting only its scale (or pixel size). New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline, Lanczos, Max or Min resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Reskew">ST_Reskew</link> - Changed: 2.1.0 Works on rasters with no SRID Resample a raster by adjusting only its skew (or rotation parameters). New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline or Lanczos resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Segmentize">ST_Segmentize</link> - Changed: 2.1.0 As a result of the introduction of geography support,
+            the usage ST_Segmentize('LINESTRING(1 2, 3 4)', 0.5) causes an ambiguous function error.
+            The input needs to be properly typed as a geometry or geography.
+            Use ST_GeomFromText, ST_GeogFromText or a cast to the required type
+			(e.g. ST_Segmentize('LINESTRING(1 2, 3 4)'::geometry, 0.5) ) Returns a modified geometry/geography having no segment longer than a given distance.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Slope">ST_Slope</link> - Changed: 2.1.0 In prior versions, return values were in radians. Now, return values default to degrees Returns the slope (in degrees by default) of an elevation raster band. Useful for analyzing terrain.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SnapToGrid">ST_SnapToGrid</link> - Changed: 2.1.0 Works on rasters with no SRID Resample a raster by snapping it to a grid. New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline or Lanczos resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_WorldToRasterCoordX">ST_WorldToRasterCoordX</link> - Changed: 2.1.0 In prior versions, this was called ST_World2RasterCoordX Returns the column in the raster of the point geometry (pt) or a X and Y world coordinate (xw, yw) represented in world spatial reference system of raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_WorldToRasterCoordY">ST_WorldToRasterCoordY</link> - Changed: 2.1.0 In prior versions, this was called ST_World2RasterCoordY Returns the row in the raster of the point geometry (pt) or a X and Y world coordinate (xw, yw) represented in world spatial reference system of raster.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 2.0</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 2.0</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="RT_Raster_Intersect">&amp;&amp;</link> - Availability: 2.0.0 Returns TRUE if A's bounding box intersects B's bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="geometry_overlaps_nd">&amp;&amp;&amp;</link> - Availability: 2.0.0 Returns TRUE if A's n-D bounding box intersects B's n-D bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="geometry_distance_box">&lt;#&gt;</link> - Availability: 2.0.0 -- KNN only available for PostgreSQL 9.1+ Returns the 2D distance between A and B bounding boxes.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="geometry_distance_knn">&lt;-&gt;</link> - Availability: 2.0.0 -- Weak KNN provides nearest neighbors based on geometry centroid distances instead of true distances. Exact results for points, inexact for all other types. Available for PostgreSQL 9.1+ Returns the 2D distance between A and B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_Raster_Contained">@</link> - Availability:  2.0.0 raster @ raster, raster @ geometry introduced Returns TRUE if A's bounding box is contained by B's. Uses double precision bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_Raster_Contained">@</link> - Availability:  2.0.5 geometry @ raster introduced  Returns TRUE if A's bounding box is contained by B's. Uses double precision bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AddEdge">AddEdge</link> - Availability: 2.0.0 Adds a linestring edge to the edge table and associated start and end points to the point nodes table of the specified topology schema using the specified linestring geometry and returns the edgeid of the new (or existing) edge.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AddFace">AddFace</link> - Availability: 2.0.0 Registers a face primitive to a topology and gets its identifier.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AddNode">AddNode</link> - Availability: 2.0.0 Adds a point node to the node table in the specified topology schema and returns the nodeid of new node. If point already exists as node, the existing nodeid is returned.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_AddOverviewConstraints">AddOverviewConstraints</link> - Availability: 2.0.0 Tag a raster column as being an overview of another.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_AddRasterConstraints">AddRasterConstraints</link> - Availability: 2.0.0 Adds raster constraints to a loaded raster table for a specific column that constrains spatial ref, scaling, blocksize, alignment, bands, band type and a flag to denote if raster column is regularly blocked. The table must be loaded with data for the constraints to be inferred. Returns true if the constraint setting was accomplished and issues a notice otherwise.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AsGML">AsGML</link> - Availability: 2.0.0  Returns the GML representation of a topogeometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CopyTopology">CopyTopology</link> - Availability: 2.0.0 Makes a copy of a topology (nodes, edges, faces, layers and TopoGeometries) into a new schema</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_DropOverviewConstraints">DropOverviewConstraints</link> - Availability: 2.0.0 Untag a raster column from being an overview of another.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_DropRasterConstraints">DropRasterConstraints</link> - Availability: 2.0.0 Drops PostGIS raster constraints that refer to a raster table column. Useful if you need to reload data or update your raster column data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Drop_Indexes_Generate_Script">Drop_Indexes_Generate_Script</link> - Availability: 2.0.0 Generates a script that drops all non-primary key and non-unique indexes on tiger schema and user specified schema. Defaults schema to tiger_data if no schema is specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Drop_State_Tables_Generate_Script">Drop_State_Tables_Generate_Script</link> - Availability: 2.0.0 Generates a script that drops all tables in the specified schema that are prefixed with the state abbreviation. Defaults schema to tiger_data if no schema is specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Geocode_Intersection">Geocode_Intersection</link> - Availability: 2.0.0 Takes in 2 streets that intersect and a state, city, zip, and outputs a set of possible locations on the first cross street that is at the intersection, also includes a geomout as the point location in NAD 83 long lat, a normalized_address (addy) for each location, and the rating. The lower the rating the more likely the match. Results are sorted by lowest rating first. Can optionally pass in maximum results, defaults to 10. Uses Tiger data (edges, faces, addr), PostgreSQL fuzzy string matching (soundex, levenshtein).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetEdgeByPoint">GetEdgeByPoint</link> - Availability: 2.0.0 Finds the edge-id of an edge that intersects a given point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetFaceByPoint">GetFaceByPoint</link> - Availability: 2.0.0 Finds face intersecting a given point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetNodeByPoint">GetNodeByPoint</link> - Availability: 2.0.0 Finds the node-id of a node at a point location.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetNodeEdges">GetNodeEdges</link> - Availability: 2.0  Returns an ordered set of edges incident to the given node.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetRingEdges">GetRingEdges</link> - Availability: 2.0.0  Returns the ordered set of signed edge identifiers met by walking on ana given edge side.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetTopoGeomElements">GetTopoGeomElements</link> - Availability: 2.0.0 Returns a set of topoelement objects containing the topological element_id,element_type of the given TopoGeometry (primitive elements).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GetTopologySRID">GetTopologySRID</link> - Availability: 2.0.0 Returns the SRID of a topology in the topology.topology table given the name of the topology.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Get_Tract">Get_Tract</link> - Availability: 2.0.0 Returns census tract or field from tract table of where the geometry is located. Default to returning short name of tract.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Install_Missing_Indexes">Install_Missing_Indexes</link> - Availability: 2.0.0 Finds all tables with key columns used in geocoder joins and filter conditions that are missing used indexes on those columns and will add them.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Loader_Generate_Census_Script">Loader_Generate_Census_Script</link> - Availability: 2.0.0  Generates a shell script for the specified platform for the specified states that will download Tiger census state tract, bg, and tabblocks data tables, stage and load into tiger_data schema. Each state script is returned as a separate record.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Loader_Generate_Script">Loader_Generate_Script</link> - Availability: 2.0.0 to support Tiger 2010 structured data and load census tract (tract), block groups (bg), and blocks (tabblocks) tables . Generates a shell script for the specified platform for the specified states that will download Tiger data, stage and load into tiger_data schema. Each state script is returned as a separate record. Latest version supports Tiger 2010 structural changes and also loads census tract, block groups, and blocks tables.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Missing_Indexes_Generate_Script">Missing_Indexes_Generate_Script</link> - Availability: 2.0.0 Finds all tables with key columns used in geocoder joins that are missing indexes on those columns and will output the SQL DDL to define the index for those tables.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopologyPolygonize">Polygonize</link> - Availability: 2.0.0 Finds and registers all faces defined by topology edges.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Reverse_Geocode">Reverse_Geocode</link> - Availability: 2.0.0  Takes a geometry point in a known spatial ref sys and returns a record containing an array of theoretically possible addresses and an array of cross streets. If include_strnum_range = true, includes the street range in the cross streets.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DClosestPoint">ST_3DClosestPoint</link> - Availability: 2.0.0 Returns the 3D point on g1 that is closest to g2. This is the first point of the 3D shortest line.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DDFullyWithin">ST_3DDFullyWithin</link> - Availability: 2.0.0 Tests if two 3D geometries are entirely within a given 3D distance</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DDWithin">ST_3DDWithin</link> - Availability: 2.0.0 Tests if two 3D geometries are within a given 3D distance</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DDistance">ST_3DDistance</link> - Availability: 2.0.0 Returns the 3D cartesian minimum distance (based on spatial ref) between two geometries in projected units.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DIntersects">ST_3DIntersects</link> - Availability: 2.0.0 Tests if two geometries spatially intersect in 3D - only for points, linestrings, polygons, polyhedral surface (area)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DLongestLine">ST_3DLongestLine</link> - Availability: 2.0.0 Returns the 3D longest line between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DMaxDistance">ST_3DMaxDistance</link> - Availability: 2.0.0 Returns the 3D cartesian maximum distance (based on spatial ref) between two geometries in projected units.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DShortestLine">ST_3DShortestLine</link> - Availability: 2.0.0 Returns the 3D shortest line between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AddEdgeModFace">ST_AddEdgeModFace</link> - Availability: 2.0  Add a new edge and, if in doing so it splits a face, modify the original face and add a new face.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AddEdgeNewFaces">ST_AddEdgeNewFaces</link> - Availability: 2.0  Add a new edge and, if in doing so it splits a face, delete the original face and replace it with two new faces.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsGDALRaster">ST_AsGDALRaster</link> - Availability: 2.0.0 - requires GDAL &gt;= 1.6.0.  Return the raster tile in the designated GDAL Raster format. Raster formats are one of those supported by your compiled library. Use ST_GDALDrivers() to get a list of formats supported by your library.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsJPEG">ST_AsJPEG</link> - Availability: 2.0.0 - requires GDAL &gt;= 1.6.0.  Return the raster tile selected bands as a single Joint Photographic Exports Group (JPEG) image (byte array). If no band is specified and 1 or more than 3 bands, then only the first band is used. If only 3 bands then all 3 bands are used and mapped to RGB.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsLatLonText">ST_AsLatLonText</link> - Availability: 2.0 Return the Degrees, Minutes, Seconds representation of the given point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsPNG">ST_AsPNG</link> - Availability: 2.0.0 - requires GDAL &gt;= 1.6.0.  Return the raster tile selected bands as a single portable network graphics (PNG) image (byte array). If 1, 3, or 4 bands in raster and no bands are specified, then all bands are used. If more 2 or more than 4 bands and no bands specified, then only band 1 is used. Bands are mapped to RGB or RGBA space.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsRaster">ST_AsRaster</link> - Availability: 2.0.0 - requires GDAL &gt;= 1.6.0.  Converts a PostGIS geometry to a PostGIS raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_AsTIFF">ST_AsTIFF</link> - Availability: 2.0.0 - requires GDAL &gt;= 1.6.0.  Return the raster selected bands as a single TIFF image (byte array). If no band is specified or any of specified bands does not exist in the raster, then will try to use all bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsX3D">ST_AsX3D</link> - Availability: 2.0.0: ISO-IEC-19776-1.2-X3DEncodings-XML Returns a Geometry in X3D xml node element format: ISO-IEC-19776-1.2-X3DEncodings-XML</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Aspect">ST_Aspect</link> - Availability: 2.0.0  Returns the aspect (in degrees by default) of an elevation raster band. Useful for analyzing terrain.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Band">ST_Band</link> - Availability: 2.0.0 Returns one or more bands of an existing raster as a new raster. Useful for building new rasters from existing rasters.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_BandIsNoData">ST_BandIsNoData</link> - Availability: 2.0.0 Returns true if the band is filled with only nodata values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Clip">ST_Clip</link> - Availability: 2.0.0  Returns the raster clipped by the input geometry. If band number is not specified, all bands are processed. If crop is not specified or TRUE, the output raster is cropped. If touched is set to TRUE, then touched pixels are included, otherwise only if the center of the pixel is in the geometry it is included.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CollectionHomogenize">ST_CollectionHomogenize</link> - Availability: 2.0.0 Returns the simplest representation of a geometry collection.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ConcaveHull">ST_ConcaveHull</link> - Availability: 2.0.0 Computes a possibly concave geometry that contains all input geometry vertices</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Count">ST_Count</link> - Availability: 2.0.0  Returns the number of pixels in a given band of a raster or raster coverage. If no band is specified defaults to band 1. If exclude_nodata_value is set to true, will only count pixels that are not equal to the nodata value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CreateTopoGeo">ST_CreateTopoGeo</link> - Availability: 2.0  Adds a collection of geometries to a given empty topology and returns a message detailing success.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Distinct4ma">ST_Distinct4ma</link> - Availability: 2.0.0 Raster processing function that calculates the number of unique pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_FlipCoordinates">ST_FlipCoordinates</link> - Availability: 2.0.0 Returns a version of a geometry with X and Y axis flipped.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_GDALDrivers">ST_GDALDrivers</link> - Availability: 2.0.0 - requires GDAL &gt;= 1.6.0.  Returns a list of raster formats supported by PostGIS through GDAL. Only those formats with can_write=True can be used by ST_AsGDALRaster</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGeoJSON">ST_GeomFromGeoJSON</link> - Availability: 2.0.0 requires - JSON-C &gt;= 0.9 Takes as input a geojson representation of a geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GetFaceEdges">ST_GetFaceEdges</link> - Availability: 2.0  Returns a set of ordered edges that bound aface.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_HasNoBand">ST_HasNoBand</link> - Availability: 2.0.0 Returns true if there is no band with given band number. If no band number is specified, then band number 1 is assumed.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_HillShade">ST_HillShade</link> - Availability: 2.0.0  Returns the hypothetical illumination of an elevation raster band using provided azimuth, altitude, brightness and scale inputs.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Histogram">ST_Histogram</link> - Availability: 2.0.0  Returns a set of record summarizing a raster or raster coverage data distribution separate bin ranges. Number of bins are autocomputed if not specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_InterpolatePoint">ST_InterpolatePoint</link> - Availability: 2.0.0 Returns the interpolated measure of a geometry closest to a point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_IsEmpty">ST_IsEmpty</link> - Availability: 2.0.0 Returns true if the raster is empty (width = 0 and height = 0). Otherwise, returns false.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsValidDetail">ST_IsValidDetail</link> - Availability: 2.0.0 Returns a valid_detail row stating if a geometry is valid or if not a reason and a location.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsValidReason">ST_IsValidReason</link> - Availability: 2.0 version taking flags. Returns text stating if a geometry is valid, or a reason for invalidity.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeLine">ST_MakeLine</link> - Availability: 2.0.0 -  Support for LineString input elements was introduced Creates a LineString from Point, MultiPoint, or LineString geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeValid">ST_MakeValid</link> - Availability: 2.0.0 Attempts to make an invalid geometry valid without losing vertices.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebraExpr">ST_MapAlgebraExpr</link> - Availability: 2.0.0  1 raster band version: Creates a new one band raster formed by applying a valid PostgreSQL algebraic operation on the input raster band and of pixeltype provided. Band 1 is assumed if no band is specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebraExpr2">ST_MapAlgebraExpr</link> - Availability: 2.0.0  2 raster band version: Creates a new one band raster formed by applying a valid PostgreSQL algebraic operation on the two input raster bands and of pixeltype provided. band 1 of each raster is assumed if no band numbers are specified. The resulting raster will be aligned (scale, skew and pixel corners) on the grid defined by the first raster and have its extent defined by the "extenttype" parameter. Values for "extenttype" can be: INTERSECTION, UNION, FIRST, SECOND.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebraFct">ST_MapAlgebraFct</link> - Availability: 2.0.0 1 band version - Creates a new one band raster formed by applying a valid PostgreSQL function on the input raster band and of pixeltype prodived. Band 1 is assumed if no band is specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebraFct2">ST_MapAlgebraFct</link> - Availability: 2.0.0 2 band version - Creates a new one band raster formed by applying a valid PostgreSQL function on the 2 input raster bands and of pixeltype prodived. Band 1 is assumed if no band is specified. Extent type defaults to INTERSECTION if not specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_MapAlgebraFctNgb">ST_MapAlgebraFctNgb</link> - Availability: 2.0.0  1-band version: Map Algebra Nearest Neighbor using user-defined PostgreSQL function. Return a raster which values are the result of a PLPGSQL user function involving a neighborhood of values from the input raster band.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Max4ma">ST_Max4ma</link> - Availability: 2.0.0 Raster processing function that calculates the maximum pixel value in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Mean4ma">ST_Mean4ma</link> - Availability: 2.0.0 Raster processing function that calculates the mean pixel value in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Min4ma">ST_Min4ma</link> - Availability: 2.0.0 Raster processing function that calculates the minimum pixel value in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ModEdgeHeal">ST_ModEdgeHeal</link> - Availability: 2.0 Heals two edges by deleting the node connecting them, modifying the first edgeand deleting the second edge. Returns the id of the deleted node.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MoveIsoNode">ST_MoveIsoNode</link> - Availability: 2.0.0  Moves an isolated node in a topology from one point to another. If new apoint geometry exists as a node an error is thrown. Returns description of move.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_NewEdgeHeal">ST_NewEdgeHeal</link> - Availability: 2.0 Heals two edges by deleting the node connecting them, deleting both edges,and replacing them with an edge whose direction is the same as the firstedge provided.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Node">ST_Node</link> - Availability: 2.0.0 Nodes a collection of lines.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_NumPatches">ST_NumPatches</link> - Availability: 2.0.0 Return the number of faces on a Polyhedral Surface. Will return null for non-polyhedral geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_OffsetCurve">ST_OffsetCurve</link> - Availability: 2.0 Returns an offset line at a given distance and side from an input line.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PatchN">ST_PatchN</link> - Availability: 2.0.0 Returns the Nth geometry (face) of a PolyhedralSurface.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Perimeter">ST_Perimeter</link> - Availability 2.0.0: Support for geography was introduced Returns the length of the boundary of a polygonal geometry or geography.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPolygon">ST_PixelAsPolygon</link> - Availability: 2.0.0 Returns the polygon geometry that bounds the pixel for a particular row and column.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_PixelAsPolygons">ST_PixelAsPolygons</link> - Availability: 2.0.0 Returns the polygon geometry that bounds every pixel of a raster band along with the value, the X and the Y raster coordinates of each pixel.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Project">ST_Project</link> - Availability: 2.0.0 Returns a point projected from a start point by a distance and bearing (azimuth).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Quantile">ST_Quantile</link> - Availability: 2.0.0  Compute quantiles for a raster or raster table coverage in the context of the sample or population. Thus, a value could be examined to be at the raster's 25%, 50%, 75% percentile.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Range4ma">ST_Range4ma</link> - Availability: 2.0.0 Raster processing function that calculates the range of pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Reclass">ST_Reclass</link> - Availability: 2.0.0  Creates a new raster composed of band types reclassified from original. The nband is the band to be changed. If nband is not specified assumed to be 1. All other bands are returned unchanged. Use case: convert a 16BUI band to a 8BUI and so forth for simpler rendering as viewable formats.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RelateMatch">ST_RelateMatch</link> - Availability: 2.0.0 Tests if a DE-9IM Intersection Matrix matches an Intersection Matrix pattern</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemEdgeModFace">ST_RemEdgeModFace</link> - Availability: 2.0  Removes an edge, and if the edge separates two facesdeletes one face and modifies the other face to cover the space of both.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RemEdgeNewFace">ST_RemEdgeNewFace</link> - Availability: 2.0  Removes an edge and, if the removed edge separated two faces,delete the original faces and replace them with a new face.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Resample">ST_Resample</link> - Availability: 2.0.0 Requires GDAL 1.6.1+ Resample a raster using a specified resampling algorithm, new dimensions, an arbitrary grid corner and a set of raster georeferencing attributes defined or borrowed from another raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Rescale">ST_Rescale</link> - Availability: 2.0.0  Requires GDAL 1.6.1+ Resample a raster by adjusting only its scale (or pixel size). New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline, Lanczos, Max or Min resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Reskew">ST_Reskew</link> - Availability: 2.0.0  Requires GDAL 1.6.1+ Resample a raster by adjusting only its skew (or rotation parameters). New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline or Lanczos resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SameAlignment">ST_SameAlignment</link> - Availability: 2.0.0 Returns true if rasters have same skew, scale, spatial ref, and offset (pixels can be put on same grid without cutting into pixels) and false if they don't with notice detailing issue.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetBandIsNoData">ST_SetBandIsNoData</link> - Availability: 2.0.0 Sets the isnodata flag of the band to TRUE.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SharedPaths">ST_SharedPaths</link> - Availability: 2.0.0 Returns a collection containing paths shared by the two input linestrings/multilinestrings.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Slope">ST_Slope</link> - Availability: 2.0.0  Returns the slope (in degrees by default) of an elevation raster band. Useful for analyzing terrain.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Snap">ST_Snap</link> - Availability: 2.0.0 Snap segments and vertices of input geometry to vertices of a reference geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SnapToGrid">ST_SnapToGrid</link> - Availability: 2.0.0  Requires GDAL 1.6.1+ Resample a raster by snapping it to a grid. New pixel values are computed using the NearestNeighbor (english or american spelling), Bilinear, Cubic, CubicSpline or Lanczos resampling algorithm. Default is NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Split">ST_Split</link> - Availability: 2.0.0 requires GEOS Returns a collection of geometries created by splitting a geometry by another geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_StdDev4ma">ST_StdDev4ma</link> - Availability: 2.0.0 Raster processing function that calculates the standard deviation of pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Sum4ma">ST_Sum4ma</link> - Availability: 2.0.0 Raster processing function that calculates the sum of all pixel values in a neighborhood.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SummaryStats">ST_SummaryStats</link> - Availability: 2.0.0  Returns summarystats consisting of count, sum, mean, stddev, min, max for a given raster band of a raster or raster coverage. Band 1 is assumed is no band is specified.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Transform">ST_Transform</link> - Availability: 2.0.0  Requires GDAL 1.6.1+ Reprojects a raster in a known spatial reference system to another known spatial reference system using specified resampling algorithm. Options are NearestNeighbor, Bilinear, Cubic, CubicSpline, Lanczos defaulting to NearestNeighbor.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_UnaryUnion">ST_UnaryUnion</link> - Availability: 2.0.0 Computes the union of the components of a single geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Union">ST_Union</link> - Availability: 2.0.0  Returns the union of a set of raster tiles into a single raster composed of 1 or more bands.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_ValueCount">ST_ValueCount</link> - Availability: 2.0.0  Returns a set of records containing a pixel band value and count of the number of pixels in a given band of a raster (or a raster coverage) that have a given set of values. If no band is specified defaults to band 1. By default nodata value pixels are not counted. and all other values in the pixel are output and pixel band values are rounded to the nearest integer.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoElementArray_Agg">TopoElementArray_Agg</link> - Availability: 2.0.0 Returns a topoelementarray for a set of element_id, type arrays (topoelements).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeo_AddLineString">TopoGeo_AddLineString</link> - Availability: 2.0.0 Adds a linestring to an existing topology using a tolerance and possibly splitting existing edges/faces.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeo_AddPoint">TopoGeo_AddPoint</link> - Availability: 2.0.0 Adds a point to an existing topology using a tolerance and possibly splitting an existing edge.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopoGeo_AddPolygon">TopoGeo_AddPolygon</link> - Availability: 2.0.0 Adds a polygon to an existing topology using a tolerance and possibly splitting existing edges/faces. Returns face identifiers.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="TopologySummary">TopologySummary</link> - Availability: 2.0.0 Takes a topology name and provides summary totals of types of objects in topology.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Topology_Load_Tiger">Topology_Load_Tiger</link> - Availability: 2.0.0  Loads a defined region of tiger data into a PostGIS Topology and transforming the tiger data to spatial reference of the topology and snapping to the precision tolerance of the topology.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="toTopoGeom">toTopoGeom</link> - Availability: 2.0 Converts a simple Geometry into a topo geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_Raster_Contains">~</link> - Availability:  2.0.0 Returns TRUE if A's bounding box is contains B's. Uses double precision bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_Raster_Same">~=</link> - Availability: 2.0.0 Returns TRUE if A's bounding box is the same as B's.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions enhanced in PostGIS 2.0</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="geometry_overlaps">&amp;&amp;</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Returns TRUE if A's 2D bounding box intersects B's 2D bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AddGeometryColumn">AddGeometryColumn</link> - Enhanced: 2.0.0 use_typmod argument introduced.  Defaults to creating typmod geometry column instead of constraint-based. Adds a geometry column to an existing table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Box2D">Box2D</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns a BOX2D representing the 2D extent of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Box3D">Box3D</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns a BOX3D representing the 3D extent of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="CreateTopology">CreateTopology</link> - Enhanced: 2.0 added the signature accepting hasZ Creates a new topology schema and registers it in the topology.topology table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Geocode">Geocode</link> - Enhanced: 2.0.0 to support Tiger 2010 structured data and revised some logic to improve speed, accuracy of geocoding, and to offset point from centerline to side of street address is located on. The new parameter max_results useful for specifying number of best results or just returning the best result. Takes in an address as a string (or other normalized address) and outputs a set of possible locations which include a point geometry in NAD 83 long lat, a normalized address for each, and the rating. The lower the rating the more likely the match. Results are sorted by lowest rating first. Can optionally pass in maximum results, defaults to 10, and restrict_region (defaults to NULL)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="GeometryType">GeometryType</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns the type of a geometry as text.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Populate_Geometry_Columns">Populate_Geometry_Columns</link> - Enhanced: 2.0.0 use_typmod optional argument was introduced that allows controlling if columns are created with typmodifiers or with check constraints. Ensures geometry columns are defined with type modifiers or have appropriate spatial constraints.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DExtent">ST_3DExtent</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Aggregate function that returns the 3D bounding box of geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Affine">ST_Affine</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Apply a 3D affine transformation to a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Area">ST_Area</link> - Enhanced: 2.0.0 - support for 2D polyhedral surfaces was introduced. Returns the area of a polygonal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Enhanced: 2.0.0 support for higher coordinate dimensions was introduced. Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Enhanced: 2.0.0 support for specifying endian with geography was introduced. Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsEWKB">ST_AsEWKB</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Return the Extended Well-Known Binary (EWKB) representation of the geometry with SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsEWKT">ST_AsEWKT</link> - Enhanced: 2.0.0 support for Geography, Polyhedral surfaces, Triangles and TIN was introduced. Return the Well-Known Text (WKT) representation of the geometry with SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Enhanced: 2.0.0 prefix support was introduced. Option 4 for GML3 was introduced to allow using LineString instead of Curve tag for lines. GML3 Support for Polyhedral surfaces and TINS was introduced. Option 32 was introduced to output the box. Return the geometry as a GML version 2 or 3 element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsKML">ST_AsKML</link> - Enhanced: 2.0.0 - Add prefix namespace, use default and named args Return the geometry as a KML element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Azimuth">ST_Azimuth</link> - Enhanced: 2.0.0 support for geography was introduced. Returns the north-based azimuth of a line between two points.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Dimension">ST_Dimension</link> - Enhanced: 2.0.0 support for Polyhedral surfaces and TINs was introduced. No longer throws an exception if given empty geometry. Returns the topological dimension of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Dump">ST_Dump</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns a set of geometry_dump rows for the components of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DumpPoints">ST_DumpPoints</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns a set of geometry_dump rows for the coordinates in a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Expand">ST_Expand</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns a bounding box expanded from another bounding box or a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Extent">ST_Extent</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Aggregate function that returns the bounding box of geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force2D">ST_Force2D</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Force the geometries into a "2-dimensional mode".</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3D">ST_Force3D</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Force the geometries into XYZ mode. This is an alias for ST_Force3DZ.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_3DZ">ST_Force3DZ</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Force the geometries into XYZ mode.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Force_Collection">ST_ForceCollection</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Convert the geometry into a GEOMETRYCOLLECTION.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ForceRHR">ST_ForceRHR</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Force the orientation of the vertices in a polygon to follow the Right-Hand-Rule.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GMLToSQL">ST_GMLToSQL</link> - Enhanced: 2.0.0 support for Polyhedral surfaces and TIN was introduced. Return a specified ST_Geometry value from GML representation. This is an alias name for ST_GeomFromGML</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GMLToSQL">ST_GMLToSQL</link> - Enhanced: 2.0.0 default srid optional parameter added. Return a specified ST_Geometry value from GML representation. This is an alias name for ST_GeomFromGML</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromEWKB">ST_GeomFromEWKB</link> - Enhanced: 2.0.0 support for Polyhedral surfaces and TIN was introduced. Return a specified ST_Geometry value from Extended Well-Known Binary representation (EWKB).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromEWKT">ST_GeomFromEWKT</link> - Enhanced: 2.0.0 support for Polyhedral surfaces and TIN was introduced. Return a specified ST_Geometry value from Extended Well-Known Text representation (EWKT).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGML">ST_GeomFromGML</link> - Enhanced: 2.0.0 support for Polyhedral surfaces and TIN was introduced. Takes as input GML representation of geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGML">ST_GeomFromGML</link> - Enhanced: 2.0.0 default srid optional parameter added. Takes as input GML representation of geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeometryN">ST_GeometryN</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Return an element of a geometry collection.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeometryType">ST_GeometryType</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Returns the SQL-MM type of a geometry as text.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsClosed">ST_IsClosed</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Tests if a LineStrings's start and end points are coincident. For a PolyhedralSurface tests if it is closed (volumetric).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeEnvelope">ST_MakeEnvelope</link> - Enhanced: 2.0: Ability to specify an envelope without specifying an SRID was introduced. Creates a rectangular Polygon from minimum and maximum coordinates.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeValid">ST_MakeValid</link> - Enhanced: 2.0.1, speed improvements Attempts to make an invalid geometry valid without losing vertices.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_NPoints">ST_NPoints</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Returns the number of points (vertices) in a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_NumGeometries">ST_NumGeometries</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Returns the number of elements in a geometry collection.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Relate">ST_Relate</link> - Enhanced: 2.0.0 - added support for specifying boundary node rule. Tests if two geometries have a topological relationship matching an Intersection Matrix pattern, or computes their Intersection Matrix</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Rotate">ST_Rotate</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Rotates a geometry about an origin point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Rotate">ST_Rotate</link> - Enhanced: 2.0.0 additional parameters for specifying the origin of rotation were added. Rotates a geometry about an origin point.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RotateX">ST_RotateX</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Rotates a geometry about the X axis.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RotateY">ST_RotateY</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Rotates a geometry about the Y axis.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_RotateZ">ST_RotateZ</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Rotates a geometry about the Z axis.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Scale">ST_Scale</link> - Enhanced: 2.0.0 support for Polyhedral surfaces, Triangles and TIN was introduced. Scales a geometry by given factors.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ShiftLongitude">ST_ShiftLongitude</link> - Enhanced: 2.0.0 support for Polyhedral surfaces and TIN was introduced. Shifts the longitude coordinates of a geometry between -180..180 and 0..360.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Summary">ST_Summary</link> - Enhanced: 2.0.0 added support for geography Returns a text summary of the contents of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Transform">ST_Transform</link> - Enhanced: 2.0.0 support for Polyhedral surfaces was introduced. Return a new geometry with coordinates transformed to a different spatial reference system.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_Value">ST_Value</link> - Enhanced: 2.0.0 exclude_nodata_value optional argument was added. Returns the value of a given band in a given columnx, rowy pixel or at a particular geometric point. Band numbers start at 1 and assumed to be 1 if not specified. If exclude_nodata_value is set to false, then all pixels include nodata pixels are considered to intersect and return value. If exclude_nodata_value is not passed in then reads it from metadata of raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ValidateTopology">ValidateTopology</link> - Enhanced: 2.0.0 more efficient edge crossing detection and fixes for false positives that were existent in prior versions. Returns a set of validatetopology_returntype objects detailing issues with topology.</simpara>
+    </listitem>
+  </itemizedlist>
+  <para>Functions changed in PostGIS 2.0</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="AddGeometryColumn">AddGeometryColumn</link> - Changed: 2.0.0 This function no longer updates geometry_columns since geometry_columns is a view that reads from system catalogs.  It by default
+			also does not create constraints, but instead uses the built in type modifier behavior of PostgreSQL.  So for example building a wgs84 POINT column with this function is now
+			equivalent to: ALTER TABLE some_table ADD COLUMN geom geometry(Point,4326);  Adds a geometry column to an existing table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AddGeometryColumn">AddGeometryColumn</link> - Changed: 2.0.0 If you require the old behavior of constraints use the default use_typmod, but set it to false. Adds a geometry column to an existing table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="AddGeometryColumn">AddGeometryColumn</link> - Changed: 2.0.0 Views can no longer be manually registered in geometry_columns, however views built against geometry typmod tables geometries and used without wrapper functions will register themselves correctly
+		            because they inherit the typmod behavior of their parent table column.
+		            Views that use geometry functions that output other geometries will need to be cast to typmod geometries for these view geometry columns to be registered correctly
+		            in geometry_columns. Refer to .
+			 Adds a geometry column to an existing table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_Box3D">Box3D</link> - Changed: 2.0.0 In pre-2.0 versions, there used to be a box2d instead of box3d.  Since box2d is a deprecated type, this was changed to box3d. Returns the box 3d representation of the enclosing box of the raster.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="DropGeometryColumn">DropGeometryColumn</link> - Changed: 2.0.0 This function is provided for backward compatibility.  Now that since geometry_columns is now a view against the system catalogs,
+			    you can drop a geometry column like any other table column using ALTER TABLE Removes a geometry column from a spatial table.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="DropGeometryTable">DropGeometryTable</link> - Changed: 2.0.0 This function is provided for backward compatibility.  Now that since geometry_columns is now a view against the system catalogs,
+			    you can drop a table with geometry columns like any other table using DROP TABLE Drops a table and all its references in geometry_columns.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="Populate_Geometry_Columns">Populate_Geometry_Columns</link> - Changed: 2.0.0 By default, now uses type modifiers instead of check constraints to constrain geometry types.  You can still use check
+		    constraint behavior instead by using the new  use_typmod and setting it to false. Ensures geometry columns are defined with type modifiers or have appropriate spatial constraints.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DExtent">ST_3DExtent</link> - Changed: 2.0.0 In prior versions this used to be called ST_Extent3D Aggregate function that returns the 3D bounding box of geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DLength">ST_3DLength</link> - Changed: 2.0.0 In prior versions this used to be called ST_Length3D Returns the 3D length of a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DMakeBox">ST_3DMakeBox</link> - Changed: 2.0.0 In prior versions this used to be called ST_MakeBox3D Creates a BOX3D defined by two 3D point geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_3DPerimeter">ST_3DPerimeter</link> - Changed: 2.0.0 In prior versions this used to be called ST_Perimeter3D Returns the 3D perimeter of a polygonal geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Changed: 2.0.0 Inputs to this function can not be unknown -- must be geometry.  Constructs such as ST_AsBinary('POINT(1 2)') are no longer valid and you will get an n st_asbinary(unknown)  is not unique error.  Code like that
+			needs to be changed to ST_AsBinary('POINT(1 2)'::geometry);.  If that is not possible, then install legacy.sql. Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Changed: 2.0.0 use default named args Return the geometry as a GML version 2 or 3 element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Changed: 2.0.0 support default args and named args. Return a geometry or feature in GeoJSON format.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsSVG">ST_AsSVG</link> - Changed: 2.0.0 to use default args and support named args Returns SVG path data for a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_EndPoint">ST_EndPoint</link> - Changed: 2.0.0 no longer works with single geometry MultiLineStrings.  In older
+	  versions of PostGIS a single-line MultiLineString would work with this
+	  function and return the end point.  In 2.0.0 it returns NULL like any other MultiLineString.
+	  The old behavior was an undocumented feature, but people who assumed they had their data stored as LINESTRING
+	  may experience these returning NULL in 2.0.0. Returns the last point of a LineString or CircularLineString.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_GDALDrivers">ST_GDALDrivers</link> - Changed: 2.0.6, 2.1.3 - by default no drivers are enabled, unless GUC or Environment variable gdal_enabled_drivers is set. Returns a list of raster formats supported by PostGIS through GDAL. Only those formats with can_write=True can be used by ST_AsGDALRaster</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromText">ST_GeomFromText</link> - Changed: 2.0.0 In prior versions of PostGIS ST_GeomFromText('GEOMETRYCOLLECTION(EMPTY)') was allowed.  This is now illegal in PostGIS 2.0.0 to better conform with SQL/MM standards. This should now be
+			    written as ST_GeomFromText('GEOMETRYCOLLECTION EMPTY') Return a specified ST_Geometry value from Well-Known Text representation (WKT).</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeometryN">ST_GeometryN</link> - Changed: 2.0.0 Prior versions would return NULL for singular geometries.  This was changed to return the geometry for ST_GeometryN(..,1) case. Return an element of a geometry collection.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsEmpty">ST_IsEmpty</link> - Changed: 2.0.0 In prior versions of PostGIS ST_GeomFromText('GEOMETRYCOLLECTION(EMPTY)') was allowed.  This is now illegal in PostGIS 2.0.0 to better conform with SQL/MM standards Tests if a geometry is empty.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Length">ST_Length</link> - Changed: 2.0.0 Breaking change -- in prior versions applying this to a MULTI/POLYGON of type geography would give you the perimeter of the POLYGON/MULTIPOLYGON.  In 2.0.0
+			this was changed to return 0 to be in line with geometry behavior.  Please use ST_Perimeter if you want the perimeter of a polygon Returns the 2D length of a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LocateAlong">ST_LocateAlong</link> - Changed: 2.0.0 in prior versions this used to be called ST_Locate_Along_Measure. Returns the point(s) on a geometry that match a measure value.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LocateBetween">ST_LocateBetween</link> - Changed: 2.0.0 - in prior versions this used to be called ST_Locate_Between_Measures. Returns the portions of a geometry that match a measure range.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ModEdgeSplit">ST_ModEdgeSplit</link> - Changed: 2.0 - In prior versions, this was misnamed ST_ModEdgesSplit Split an edge by creating a new node along an existing edge, modifying the original edge and adding a new edge.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_NumGeometries">ST_NumGeometries</link> - Changed: 2.0.0 In prior versions this would return NULL if the geometry was not a collection/MULTI type.
+				2.0.0+ now returns 1 for single geometries e.g POLYGON, LINESTRING, POINT. Returns the number of elements in a geometry collection.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_NumInteriorRings">ST_NumInteriorRings</link> - Changed: 2.0.0 - in prior versions it would allow passing a MULTIPOLYGON, returning the number of interior rings of first POLYGON. Returns the number of interior rings (holes) of a Polygon.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_PointN">ST_PointN</link> - Changed: 2.0.0 no longer works with single geometry multilinestrings.  In older
+	  versions of PostGIS -- a single line multilinestring would work happily with this
+	  function and return the start point.  In 2.0.0 it just returns NULL like any other multilinestring. Returns the Nth point in the first LineString or circular LineString in a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_ScaleX">ST_ScaleX</link> - Changed: 2.0.0. In WKTRaster versions this was called ST_PixelSizeX. Returns the X component of the pixel width in units of coordinate reference system.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_ScaleY">ST_ScaleY</link> - Changed: 2.0.0. In WKTRaster versions this was called ST_PixelSizeY. Returns the Y component of the pixel height in units of coordinate reference system.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="RT_ST_SetScale">ST_SetScale</link> - Changed: 2.0.0 In WKTRaster versions this was called ST_SetPixelSize.  This was changed in 2.0.0. Sets the X and Y size of pixels in units of coordinate reference system. Number units/pixel width/height.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_StartPoint">ST_StartPoint</link> - Changed: 2.0.0 no longer works with single geometry MultiLineStrings.  In older
+	  versions of PostGIS a single-line MultiLineString would work happily with this
+	  function and return the start point.  In 2.0.0 it just returns NULL like any other MultiLineString.
+	  The old behavior was an undocumented feature, but people who assumed they had their data stored as LINESTRING
+	  may experience these returning NULL in 2.0.0. Returns the first point of a LineString.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 1.5</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 1.5</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="geometry_overlaps">&amp;&amp;</link> - Availability: 1.5.0 support for geography was introduced. Returns TRUE if A's 2D bounding box intersects B's 2D bounding box.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="PostGIS_LibXML_Version">PostGIS_LibXML_Version</link> - Availability: 1.5 Returns the version number of the libxml2 library.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AddMeasure">ST_AddMeasure</link> - Availability: 1.5.0 Interpolates measures along a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Availability: 1.5.0 geography support was introduced. Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Availability: 1.5.0 geography support was introduced. Return the geometry as a GML version 2 or 3 element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Availability: 1.5.0 geography support was introduced. Return a geometry or feature in GeoJSON format.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsText">ST_AsText</link> - Availability: 1.5 - support for geography was introduced. Return the Well-Known Text (WKT) representation of the geometry/geography without SRID metadata.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Buffer">ST_Buffer</link> - Availability: 1.5 - ST_Buffer was enhanced to support different endcaps and join types. These are useful for example to convert road linestrings
+                    into polygon roads with flat or square edges instead of rounded edges. Thin wrapper for geography was added.
+                 Computes a geometry covering all points within a given distance from a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ClosestPoint">ST_ClosestPoint</link> - Availability: 1.5.0 Returns the 2D point on g1 that is closest to g2. This is the first point of the shortest line from one geometry to the other.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CollectionExtract">ST_CollectionExtract</link> - Availability: 1.5.0 Given a geometry collection, returns a multi-geometry containing only elements of a specified type.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Covers">ST_Covers</link> - Availability: 1.5 - support for geography was introduced.  Tests if every point of B lies in A</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DFullyWithin">ST_DFullyWithin</link> - Availability: 1.5.0 Tests if a geometry is entirely inside a distance of another</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DWithin">ST_DWithin</link> - Availability: 1.5.0 support for geography was introduced Tests if two geometries are within a given distance</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance">ST_Distance</link> - Availability: 1.5.0 geography support was introduced in 1.5.  Speed improvements for planar to better handle large or many vertex geometries Returns the distance between two geometry or geography values.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DistanceSphere">ST_DistanceSphere</link> - Availability: 1.5 - support for other geometry types besides points was introduced. Prior versions only work with points. Returns minimum distance in meters between two lon/lat geometries using a spherical earth model.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Distance_Spheroid">ST_DistanceSpheroid</link> - Availability: 1.5 - support for other geometry types besides points was introduced. Prior versions only work with points. Returns the minimum distance between two lon/lat geometries using a spheroidal earth model.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_DumpPoints">ST_DumpPoints</link> - Availability: 1.5.0 Returns a set of geometry_dump rows for the coordinates in a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Envelope">ST_Envelope</link> - Availability: 1.5.0 behavior changed to output double precision instead of float4 Returns a geometry representing the bounding box of a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Expand">ST_Expand</link> - Availability: 1.5.0 behavior changed to output double precision instead of float4 coordinates. Returns a bounding box expanded from another bounding box or a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GMLToSQL">ST_GMLToSQL</link> - Availability: 1.5, requires libxml2 1.6+ Return a specified ST_Geometry value from GML representation. This is an alias name for ST_GeomFromGML</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromGML">ST_GeomFromGML</link> - Availability: 1.5, requires libxml2 1.6+ Takes as input GML representation of geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeomFromKML">ST_GeomFromKML</link> - Availability: 1.5, requires libxml2 2.6+ Takes as input KML representation of geometry and outputs a PostGIS geometry object</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_HausdorffDistance">ST_HausdorffDistance</link> - Availability: 1.5.0 Returns the Hausdorff distance between two geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersection">ST_Intersection</link> - Availability: 1.5 support for geography data type was introduced. Computes a geometry representing the shared portion of geometries A and B.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Intersects">ST_Intersects</link> - Availability: 1.5 support for geography was introduced. Tests if two geometries intersect (they have at least one point in common)</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Length">ST_Length</link> - Availability: 1.5.0 geography support was introduced in 1.5. Returns the 2D length of a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LongestLine">ST_LongestLine</link> - Availability: 1.5.0 Returns the 2D longest line between two geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeEnvelope">ST_MakeEnvelope</link> - Availability: 1.5 Creates a rectangular Polygon from minimum and maximum coordinates.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MaxDistance">ST_MaxDistance</link> - Availability: 1.5.0 Returns the 2D largest distance between two geometries in projected units.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ShortestLine">ST_ShortestLine</link> - Availability: 1.5.0 Returns the 2D shortest line between two geometries</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Geometry_Same">~=</link> - Availability: 1.5.0 changed behavior Returns TRUE if A's bounding box is the same as B's.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 1.4</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 1.4</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="Populate_Geometry_Columns">Populate_Geometry_Columns</link> - Availability: 1.4.0 Ensures geometry columns are defined with type modifiers or have appropriate spatial constraints.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Collect">ST_Collect</link> - Availability: 1.4.0 -  ST_Collect(geomarray) was introduced. ST_Collect was enhanced to handle more geometries faster. Creates a GeometryCollection or Multi* geometry from a set of geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_ContainsProperly">ST_ContainsProperly</link> - Availability: 1.4.0 Tests if every point of B lies in the interior of A</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_GeoHash">ST_GeoHash</link> - Availability: 1.4.0 Return a GeoHash representation of the geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_IsValidReason">ST_IsValidReason</link> - Availability: 1.4 Returns text stating if a geometry is valid, or a reason for invalidity.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineCrossingDirection">ST_LineCrossingDirection</link> - Availability: 1.4 Returns a number indicating the crossing behavior of two LineStrings</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LocateBetweenElevations">ST_LocateBetweenElevations</link> - Availability: 1.4.0 Returns the portions of a geometry that lie in an elevation (Z) range.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MakeLine">ST_MakeLine</link> - Availability: 1.4.0 -  ST_MakeLine(geomarray) was introduced. ST_MakeLine aggregate functions was enhanced to handle more points faster. Creates a LineString from Point, MultiPoint, or LineString geometries.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_MinimumBoundingCircle">ST_MinimumBoundingCircle</link> - Availability: 1.4.0 Returns the smallest circle polygon that contains a geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_Union">ST_Union</link> - Availability: 1.4.0 - ST_Union was enhanced. ST_Union(geomarray) was introduced and also faster aggregate collection in PostgreSQL. Computes a geometry representing the point-set union of the input geometries.</simpara>
+    </listitem>
+  </itemizedlist>
+</section><section>
+  <title>PostGIS Functions new or enhanced in 1.3</title>
+  <para>The functions given below are PostGIS functions that were added or enhanced.</para>
+  <para>Functions new in PostGIS 1.3</para>
+  <itemizedlist>
+    <listitem>
+      <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Availability: 1.3.2 Return the geometry as a GML version 2 or 3 element.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Availability: 1.3.4 Return a geometry or feature in GeoJSON format.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_CurveToLine">ST_CurveToLine</link> - Availability: 1.3.0 Converts a geometry containing curves to a linear geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_LineToCurve">ST_LineToCurve</link> - Availability: 1.3.0 Converts a linear geometry to a curved geometry.</simpara>
+    </listitem>
+    <listitem>
+      <simpara><link linkend="ST_SimplifyPreserveTopology">ST_SimplifyPreserveTopology</link> - Availability: 1.3.3 Returns a simplified and valid representation of a geometry, using the Douglas-Peucker algorithm.</simpara>
+    </listitem>
+  </itemizedlist>
+</section>

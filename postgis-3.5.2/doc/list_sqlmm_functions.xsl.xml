@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="CG_3DArea">CG_3DArea</link> - Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DDifference">CG_3DDifference</link> - Perform 3D difference</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DIntersection">CG_3DIntersection</link> - Perform 3D intersection</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DUnion">CG_3DUnion</link> - Perform 3D union using postgis_sfcgal.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Volume">CG_Volume</link> - Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DArea">ST_3DArea</link> - Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDWithin">ST_3DDWithin</link> - Tests if two 3D geometries are within a given 3D distance</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDifference">ST_3DDifference</link> - Perform 3D difference</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDistance">ST_3DDistance</link> - Returns the 3D cartesian minimum distance (based on spatial ref) between two geometries in projected units.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DIntersection">ST_3DIntersection</link> - Perform 3D intersection</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DIntersects">ST_3DIntersects</link> - Tests if two geometries spatially intersect in 3D - only for points, linestrings, polygons, polyhedral surface (area)</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DLength">ST_3DLength</link> - Returns the 3D length of a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DPerimeter">ST_3DPerimeter</link> - Returns the 3D perimeter of a polygonal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DUnion">ST_3DUnion</link> - Perform 3D union.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AddEdgeModFace">ST_AddEdgeModFace</link> - Add a new edge and, if in doing so it splits a face, modify the original face and add a new face.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AddEdgeNewFaces">ST_AddEdgeNewFaces</link> - Add a new edge and, if in doing so it splits a face, delete the original face and replace it with two new faces.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AddIsoEdge">ST_AddIsoEdge</link> - Adds an isolated edge defined by geometry alinestring to a topology connecting two existing isolated nodes anode and anothernode and returns the edge id of the new edge.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AddIsoNode">ST_AddIsoNode</link> - Adds an isolated node to a face in a topology and returns the nodeid of the new node. If face is null, the node is still created.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Area">ST_Area</link> - Returns the area of a polygonal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Return the geometry as a GML version 2 or 3 element.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsText">ST_AsText</link> - Return the Well-Known Text (WKT) representation of the geometry/geography without SRID metadata.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Boundary">ST_Boundary</link> - Returns the boundary of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Buffer">ST_Buffer</link> - Computes a geometry covering all points within a given distance from a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Centroid">ST_Centroid</link> - Returns the geometric center of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ChangeEdgeGeom">ST_ChangeEdgeGeom</link> - Changes the shape of an edge without affecting the topology structure.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Contains">ST_Contains</link> - Tests if every point of B lies in A, and their interiors have a point in common</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ConvexHull">ST_ConvexHull</link> - Computes the convex hull of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoordDim">ST_CoordDim</link> - Return the coordinate dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CreateTopoGeo">ST_CreateTopoGeo</link> - Adds a collection of geometries to a given empty topology and returns a message detailing success.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Crosses">ST_Crosses</link> - Tests if two geometries have some, but not all, interior points in common</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CurveN">ST_CurveN</link> - Returns the Nth component curve geometry of a CompoundCurve.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CurveToLine">ST_CurveToLine</link> - Converts a geometry containing curves to a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Difference">ST_Difference</link> - Computes a geometry representing the part of geometry A that does not intersect geometry B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Dimension">ST_Dimension</link> - Returns the topological dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Disjoint">ST_Disjoint</link> - Tests if two geometries have no points in common</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Distance">ST_Distance</link> - Returns the distance between two geometry or geography values.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_EndPoint">ST_EndPoint</link> - Returns the last point of a LineString or CircularLineString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Envelope">ST_Envelope</link> - Returns a geometry representing the bounding box of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Equals">ST_Equals</link> - Tests if two geometries include the same set of points</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ExteriorRing">ST_ExteriorRing</link> - Returns a LineString representing the exterior ring of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GMLToSQL">ST_GMLToSQL</link> - Return a specified ST_Geometry value from GML representation. This is an alias name for ST_GeomFromGML</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomCollFromText">ST_GeomCollFromText</link> - Makes a collection Geometry from collection WKT with the given SRID. If SRID is not given, it defaults to 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromText">ST_GeomFromText</link> - Return a specified ST_Geometry value from Well-Known Text representation (WKT).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromWKB">ST_GeomFromWKB</link> - Creates a geometry instance from a Well-Known Binary geometry representation (WKB) and optional SRID.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryFromText">ST_GeometryFromText</link> - Return a specified ST_Geometry value from Well-Known Text representation (WKT). This is an alias name for ST_GeomFromText</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryN">ST_GeometryN</link> - Return an element of a geometry collection.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryType">ST_GeometryType</link> - Returns the SQL-MM type of a geometry as text.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GetFaceEdges">ST_GetFaceEdges</link> - Returns a set of ordered edges that bound aface.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GetFaceGeometry">ST_GetFaceGeometry</link> - Returns the polygon in the given topology with the specified face id.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_InitTopoGeo">ST_InitTopoGeo</link> - Creates a new topology schema and registers it in the topology.topology table.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_InteriorRingN">ST_InteriorRingN</link> - Returns the Nth interior ring (hole) of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Intersection">ST_Intersection</link> - Computes a geometry representing the shared portion of geometries A and B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Intersects">ST_Intersects</link> - Tests if two geometries intersect (they have at least one point in common)</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsClosed">ST_IsClosed</link> - Tests if a LineStrings's start and end points are coincident. For a PolyhedralSurface tests if it is closed (volumetric).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsEmpty">ST_IsEmpty</link> - Tests if a geometry is empty.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsRing">ST_IsRing</link> - Tests if a LineString is closed and simple.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsSimple">ST_IsSimple</link> - Tests if a geometry has no points of self-intersection or self-tangency.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsValid">ST_IsValid</link> - Tests if a geometry is well-formed in 2D.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Length">ST_Length</link> - Returns the 2D length of a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineFromText">ST_LineFromText</link> - Makes a Geometry from WKT representation with the given SRID. If SRID is not given, it defaults to 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineFromWKB">ST_LineFromWKB</link> - Makes a LINESTRING from WKB with the given SRID</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LinestringFromWKB">ST_LinestringFromWKB</link> - Makes a geometry from WKB with the given SRID.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LocateAlong">ST_LocateAlong</link> - Returns the point(s) on a geometry that match a measure value.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LocateBetween">ST_LocateBetween</link> - Returns the portions of a geometry that match a measure range.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_M">ST_M</link> - Returns the M coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MLineFromText">ST_MLineFromText</link> - Return a specified ST_MultiLineString value from WKT representation.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MPointFromText">ST_MPointFromText</link> - Makes a Geometry from WKT with the given SRID. If SRID is not given, it defaults to 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MPolyFromText">ST_MPolyFromText</link> - Makes a MultiPolygon Geometry from WKT with the given SRID. If SRID is not given, it defaults to 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ModEdgeHeal">ST_ModEdgeHeal</link> - Heals two edges by deleting the node connecting them, modifying the first edgeand deleting the second edge. Returns the id of the deleted node.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ModEdgeSplit">ST_ModEdgeSplit</link> - Split an edge by creating a new node along an existing edge, modifying the original edge and adding a new edge.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MoveIsoNode">ST_MoveIsoNode</link> - Moves an isolated node in a topology from one point to another. If new apoint geometry exists as a node an error is thrown. Returns description of move.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NewEdgeHeal">ST_NewEdgeHeal</link> - Heals two edges by deleting the node connecting them, deleting both edges,and replacing them with an edge whose direction is the same as the firstedge provided.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NewEdgesSplit">ST_NewEdgesSplit</link> - Split an edge by creating a new node along an existing edge, deleting the original edge and replacing it with two new edges. Returns the id of the new node created that joins the new edges.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumCurves">ST_NumCurves</link> - Return the number of component curves in a CompoundCurve.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumGeometries">ST_NumGeometries</link> - Returns the number of elements in a geometry collection.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumInteriorRings">ST_NumInteriorRings</link> - Returns the number of interior rings (holes) of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumPatches">ST_NumPatches</link> - Return the number of faces on a Polyhedral Surface. Will return null for non-polyhedral geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumPoints">ST_NumPoints</link> - Returns the number of points in a LineString or CircularString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_OrderingEquals">ST_OrderingEquals</link> - Tests if two geometries represent the same geometry and have points in the same directional order</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Overlaps">ST_Overlaps</link> - Tests if two geometries have the same dimension and intersect, but each has at least one point not in the other</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PatchN">ST_PatchN</link> - Returns the Nth geometry (face) of a PolyhedralSurface.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Perimeter">ST_Perimeter</link> - Returns the length of the boundary of a polygonal geometry or geography.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Point">ST_Point</link> - Creates a Point with X, Y and SRID values.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointFromText">ST_PointFromText</link> - Makes a point Geometry from WKT with the given SRID. If SRID is not given, it defaults to unknown.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointFromWKB">ST_PointFromWKB</link> - Makes a geometry from WKB with the given SRID</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointN">ST_PointN</link> - Returns the Nth point in the first LineString or circular LineString in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointOnSurface">ST_PointOnSurface</link> - Computes a point guaranteed to lie in a polygon, or on a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Polygon">ST_Polygon</link> - Creates a Polygon from a LineString with a specified SRID.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PolygonFromText">ST_PolygonFromText</link> - Makes a Geometry from WKT with the given SRID. If SRID is not given, it defaults to 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Relate">ST_Relate</link> - Tests if two geometries have a topological relationship matching an Intersection Matrix pattern, or computes their Intersection Matrix</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemEdgeModFace">ST_RemEdgeModFace</link> - Removes an edge, and if the edge separates two facesdeletes one face and modifies the other face to cover the space of both.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemEdgeNewFace">ST_RemEdgeNewFace</link> - Removes an edge and, if the removed edge separated two faces,delete the original faces and replace them with a new face.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemoveIsoEdge">ST_RemoveIsoEdge</link> - Removes an isolated edge and returns description of action. If the edge is not isolated, then an exception is thrown.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemoveIsoNode">ST_RemoveIsoNode</link> - Removes an isolated node and returns description of action. If the node is not isolated (is start or end of an edge), then an exception is thrown.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SRID">ST_SRID</link> - Returns the spatial reference identifier for a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_StartPoint">ST_StartPoint</link> - Returns the first point of a LineString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SymDifference">ST_SymDifference</link> - Computes a geometry representing the portions of geometries A and B that do not intersect.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Touches">ST_Touches</link> - Tests if two geometries have at least one point in common, but their interiors do not intersect</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Transform">ST_Transform</link> - Return a new geometry with coordinates transformed to a different spatial reference system.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Union">ST_Union</link> - Computes a geometry representing the point-set union of the input geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Volume">ST_Volume</link> - Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_WKBToSQL">ST_WKBToSQL</link> - Return a specified ST_Geometry value from Well-Known Binary representation (WKB). This is an alias name for ST_GeomFromWKB that takes no srid</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_WKTToSQL">ST_WKTToSQL</link> - Return a specified ST_Geometry value from Well-Known Text representation (WKT). This is an alias name for ST_GeomFromText</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Within">ST_Within</link> - Tests if every point of A lies in B, and their interiors have a point in common</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_X">ST_X</link> - Returns the X coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Y">ST_Y</link> - Returns the Y coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Z">ST_Z</link> - Returns the Z coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="TG_ST_SRID">ST_SRID</link> - Returns the spatial reference identifier for a topogeometry.</simpara>
+  </listitem>
+</itemizedlist>

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="AddGeometryColumn">AddGeometryColumn</link> - Adds a geometry column to an existing table.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="Box3D">Box3D</link> - Returns a BOX3D representing the 3D extent of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DArea">CG_3DArea</link> - Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DConvexHull">CG_3DConvexHull</link> - Computes the 3D convex hull of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DDifference">CG_3DDifference</link> - Perform 3D difference</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DIntersection">CG_3DIntersection</link> - Perform 3D intersection</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_3DUnion">CG_3DUnion</link> - Perform 3D union using postgis_sfcgal.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_ApproximateMedialAxis">CG_ApproximateMedialAxis</link> - Compute the approximate medial axis of an areal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_ConstrainedDelaunayTriangles">CG_ConstrainedDelaunayTriangles</link> - Return a constrained Delaunay triangulation around the given input geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Extrude">CG_Extrude</link> - Extrude a surface to a related volume</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_ForceLHR">CG_ForceLHR</link> - Force LHR orientation</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_IsPlanar">CG_IsPlanar</link> - Check if a surface is or not planar</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_IsSolid">CG_IsSolid</link> - Test if the geometry is a solid. No validity check is performed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_MakeSolid">CG_MakeSolid</link> - Cast the geometry into a solid. No check is performed. To obtain a valid solid, the input geometry must be a closed Polyhedral Surface or a closed TIN.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Orientation">CG_Orientation</link> - Determine surface orientation</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_StraightSkeleton">CG_StraightSkeleton</link> - Compute a straight skeleton from a geometry</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Tesselate">CG_Tesselate</link> - Perform surface Tessellation of a polygon or polyhedralsurface and returns as a TIN or collection of TINS</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Visibility">CG_Visibility</link> - Compute a visibility polygon from a point or a segment in a polygon geometry</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="CG_Volume">CG_Volume</link> - Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="DropGeometryColumn">DropGeometryColumn</link> - Removes a geometry column from a spatial table.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="GeometryType">GeometryType</link> - Returns the type of a geometry as text.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DArea">ST_3DArea</link> - Computes area of 3D surface geometries. Will return 0 for solids.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DClosestPoint">ST_3DClosestPoint</link> - Returns the 3D point on g1 that is closest to g2. This is the first point of the 3D shortest line.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DConvexHull">ST_3DConvexHull</link> - Computes the 3D convex hull of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDFullyWithin">ST_3DDFullyWithin</link> - Tests if two 3D geometries are entirely within a given 3D distance</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDWithin">ST_3DDWithin</link> - Tests if two 3D geometries are within a given 3D distance</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDifference">ST_3DDifference</link> - Perform 3D difference</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DDistance">ST_3DDistance</link> - Returns the 3D cartesian minimum distance (based on spatial ref) between two geometries in projected units.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DExtent">ST_3DExtent</link> - Aggregate function that returns the 3D bounding box of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DIntersection">ST_3DIntersection</link> - Perform 3D intersection</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DIntersects">ST_3DIntersects</link> - Tests if two geometries spatially intersect in 3D - only for points, linestrings, polygons, polyhedral surface (area)</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DLength">ST_3DLength</link> - Returns the 3D length of a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DLineInterpolatePoint">ST_3DLineInterpolatePoint</link> - Returns a point interpolated along a 3D line at a fractional location.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DLongestLine">ST_3DLongestLine</link> - Returns the 3D longest line between two geometries</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DMaxDistance">ST_3DMaxDistance</link> - Returns the 3D cartesian maximum distance (based on spatial ref) between two geometries in projected units.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DPerimeter">ST_3DPerimeter</link> - Returns the 3D perimeter of a polygonal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DShortestLine">ST_3DShortestLine</link> - Returns the 3D shortest line between two geometries</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_3DUnion">ST_3DUnion</link> - Perform 3D union.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AddMeasure">ST_AddMeasure</link> - Interpolates measures along a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AddPoint">ST_AddPoint</link> - Add a point to a LineString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Affine">ST_Affine</link> - Apply a 3D affine transformation to a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ApproximateMedialAxis">ST_ApproximateMedialAxis</link> - Compute the approximate medial axis of an areal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsEWKB">ST_AsEWKB</link> - Return the Extended Well-Known Binary (EWKB) representation of the geometry with SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsEWKT">ST_AsEWKT</link> - Return the Well-Known Text (WKT) representation of the geometry with SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Return the geometry as a GML version 2 or 3 element.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Return a geometry or feature in GeoJSON format.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsHEXEWKB">ST_AsHEXEWKB</link> - Returns a Geometry in HEXEWKB format (as text) using either little-endian (NDR) or big-endian (XDR) encoding.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsKML">ST_AsKML</link> - Return the geometry as a KML element.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsX3D">ST_AsX3D</link> - Returns a Geometry in X3D xml node element format: ISO-IEC-19776-1.2-X3DEncodings-XML</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Boundary">ST_Boundary</link> - Returns the boundary of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_BoundingDiagonal">ST_BoundingDiagonal</link> - Returns the diagonal of a geometry's bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CPAWithin">ST_CPAWithin</link> - Tests if the closest point of approach of two trajectoriesis within the specified distance.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ChaikinSmoothing">ST_ChaikinSmoothing</link> - Returns a smoothed version of a geometry, using the Chaikin algorithm</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClosestPointOfApproach">ST_ClosestPointOfApproach</link> - Returns a measure at the closest point of approach of two trajectories.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Collect">ST_Collect</link> - Creates a GeometryCollection or Multi* geometry from a set of geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ConstrainedDelaunayTriangles">ST_ConstrainedDelaunayTriangles</link> - Return a constrained Delaunay triangulation around the given input geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ConvexHull">ST_ConvexHull</link> - Computes the convex hull of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoordDim">ST_CoordDim</link> - Return the coordinate dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CurveN">ST_CurveN</link> - Returns the Nth component curve geometry of a CompoundCurve.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CurveToLine">ST_CurveToLine</link> - Converts a geometry containing curves to a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DelaunayTriangles">ST_DelaunayTriangles</link> - Returns the Delaunay triangulation of the vertices of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Difference">ST_Difference</link> - Computes a geometry representing the part of geometry A that does not intersect geometry B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DistanceCPA">ST_DistanceCPA</link> - Returns the distance between the closest point of approach of two trajectories.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Dump">ST_Dump</link> - Returns a set of geometry_dump rows for the components of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpPoints">ST_DumpPoints</link> - Returns a set of geometry_dump rows for the coordinates in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpRings">ST_DumpRings</link> - Returns a set of geometry_dump rows for the exterior and interior rings of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DumpSegments">ST_DumpSegments</link> - Returns a set of geometry_dump rows for the segments in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_EndPoint">ST_EndPoint</link> - Returns the last point of a LineString or CircularLineString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ExteriorRing">ST_ExteriorRing</link> - Returns a LineString representing the exterior ring of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Extrude">ST_Extrude</link> - Extrude a surface to a related volume</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_FlipCoordinates">ST_FlipCoordinates</link> - Returns a version of a geometry with X and Y axis flipped.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force2D">ST_Force2D</link> - Force the geometries into a "2-dimensional mode".</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceCurve">ST_ForceCurve</link> - Upcast a geometry into its curved type, if applicable.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceLHR">ST_ForceLHR</link> - Force LHR orientation</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForcePolygonCCW">
+				ST_ForcePolygonCCW
+			</link> - Orients all exterior rings counter-clockwise and all interior rings clockwise.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForcePolygonCW">
+				ST_ForcePolygonCW
+			</link> - Orients all exterior rings clockwise and all interior rings counter-clockwise.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceRHR">ST_ForceRHR</link> - Force the orientation of the vertices in a polygon to follow the Right-Hand-Rule.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ForceSFS">ST_ForceSFS</link> - Force the geometries to use SFS 1.1 geometry types only.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_3D">ST_Force3D</link> - Force the geometries into XYZ mode. This is an alias for ST_Force3DZ.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_3DZ">ST_Force3DZ</link> - Force the geometries into XYZ mode.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_4D">ST_Force4D</link> - Force the geometries into XYZM mode.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Force_Collection">ST_ForceCollection</link> - Convert the geometry into a GEOMETRYCOLLECTION.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromEWKB">ST_GeomFromEWKB</link> - Return a specified ST_Geometry value from Extended Well-Known Binary representation (EWKB).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromEWKT">ST_GeomFromEWKT</link> - Return a specified ST_Geometry value from Extended Well-Known Text representation (EWKT).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromGML">ST_GeomFromGML</link> - Takes as input GML representation of geometry and outputs a PostGIS geometry object</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromGeoJSON">ST_GeomFromGeoJSON</link> - Takes as input a geojson representation of a geometry and outputs a PostGIS geometry object</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeomFromKML">ST_GeomFromKML</link> - Takes as input KML representation of geometry and outputs a PostGIS geometry object</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometricMedian">
+              ST_GeometricMedian
+          </link> - Returns the geometric median of a MultiPoint.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryN">ST_GeometryN</link> - Return an element of a geometry collection.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeometryType">ST_GeometryType</link> - Returns the SQL-MM type of a geometry as text.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_HasArc">ST_HasArc</link> - Tests if a geometry contains a circular arc</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_HasM">ST_HasM</link> - Checks if a geometry has an M (measure) dimension.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_HasZ">ST_HasZ</link> - Checks if a geometry has a Z dimension.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_InteriorRingN">ST_InteriorRingN</link> - Returns the Nth interior ring (hole) of a Polygon.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_InterpolatePoint">ST_InterpolatePoint</link> - Returns the interpolated measure of a geometry closest to a point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Intersection">ST_Intersection</link> - Computes a geometry representing the shared portion of geometries A and B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsClosed">ST_IsClosed</link> - Tests if a LineStrings's start and end points are coincident. For a PolyhedralSurface tests if it is closed (volumetric).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsCollection">ST_IsCollection</link> - Tests if a geometry is a geometry collection type.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsPlanar">ST_IsPlanar</link> - Check if a surface is or not planar</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsPolygonCCW">
+				ST_IsPolygonCCW
+			</link> - Tests if Polygons have exterior rings oriented counter-clockwise and interior rings oriented clockwise.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsPolygonCW">
+				ST_IsPolygonCW
+			</link> - Tests if Polygons have exterior rings oriented clockwise and interior rings oriented counter-clockwise.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsSimple">ST_IsSimple</link> - Tests if a geometry has no points of self-intersection or self-tangency.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsSolid">ST_IsSolid</link> - Test if the geometry is a solid. No validity check is performed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_IsValidTrajectory">ST_IsValidTrajectory</link> - Tests if the geometry is a valid trajectory.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Length_Spheroid">ST_LengthSpheroid</link> - Returns the 2D or 3D length/perimeter of a lon/lat geometry on a spheroid.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineFromMultiPoint">ST_LineFromMultiPoint</link> - Creates a LineString from a MultiPoint geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineInterpolatePoint">ST_LineInterpolatePoint</link> - Returns a point interpolated along a line at a fractional location.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineInterpolatePoints">ST_LineInterpolatePoints</link> - Returns points interpolated along a line at a fractional interval.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineSubstring">ST_LineSubstring</link> - Returns the part of a line between two fractional locations.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineToCurve">ST_LineToCurve</link> - Converts a linear geometry to a curved geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LocateBetweenElevations">ST_LocateBetweenElevations</link> - Returns the portions of a geometry that lie in an elevation (Z) range.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_M">ST_M</link> - Returns the M coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakeLine">ST_MakeLine</link> - Creates a LineString from Point, MultiPoint, or LineString geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakePoint">ST_MakePoint</link> - Creates a 2D, 3DZ or 4D Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakePolygon">ST_MakePolygon</link> - Creates a Polygon from a shell and optional list of holes.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakeSolid">ST_MakeSolid</link> - Cast the geometry into a solid. No check is performed. To obtain a valid solid, the input geometry must be a closed Polyhedral Surface or a closed TIN.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MakeValid">ST_MakeValid</link> - Attempts to make an invalid geometry valid without losing vertices.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MemSize">ST_MemSize</link> - Returns the amount of memory space a geometry takes.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_MemUnion">ST_MemUnion</link> - Aggregate function which unions geometries in a memory-efficent but slower way</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NDims">ST_NDims</link> - Returns the coordinate dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NPoints">ST_NPoints</link> - Returns the number of points (vertices) in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NRings">ST_NRings</link> - Returns the number of rings in a polygonal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Node">ST_Node</link> - Nodes a collection of lines.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumCurves">ST_NumCurves</link> - Return the number of component curves in a CompoundCurve.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumGeometries">ST_NumGeometries</link> - Returns the number of elements in a geometry collection.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_NumPatches">ST_NumPatches</link> - Return the number of faces on a Polyhedral Surface. Will return null for non-polyhedral geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Orientation">ST_Orientation</link> - Determine surface orientation</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PatchN">ST_PatchN</link> - Returns the Nth geometry (face) of a PolyhedralSurface.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointFromWKB">ST_PointFromWKB</link> - Makes a geometry from WKB with the given SRID</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointN">ST_PointN</link> - Returns the Nth point in the first LineString or circular LineString in a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_PointOnSurface">ST_PointOnSurface</link> - Computes a point guaranteed to lie in a polygon, or on a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Points">ST_Points</link> - Returns a MultiPoint containing the coordinates of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Polygon">ST_Polygon</link> - Creates a Polygon from a LineString with a specified SRID.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemovePoint">ST_RemovePoint</link> - Remove a point from a linestring.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RemoveRepeatedPoints">ST_RemoveRepeatedPoints</link> - Returns a version of a geometry with duplicate points removed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Reverse">ST_Reverse</link> - Return the geometry with vertex order reversed.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Rotate">ST_Rotate</link> - Rotates a geometry about an origin point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RotateX">ST_RotateX</link> - Rotates a geometry about the X axis.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RotateY">ST_RotateY</link> - Rotates a geometry about the Y axis.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_RotateZ">ST_RotateZ</link> - Rotates a geometry about the Z axis.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Scale">ST_Scale</link> - Scales a geometry by given factors.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Scroll">ST_Scroll</link> - Change start point of a closed LineString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SetPoint">ST_SetPoint</link> - Replace point of a linestring with a given point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ShiftLongitude">ST_ShiftLongitude</link> - Shifts the longitude coordinates of a geometry between -180..180 and 0..360.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SnapToGrid">ST_SnapToGrid</link> - Snap all points of the input geometry to a regular grid.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_StartPoint">ST_StartPoint</link> - Returns the first point of a LineString.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_StraightSkeleton">ST_StraightSkeleton</link> - Compute a straight skeleton from a geometry</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SwapOrdinates">ST_SwapOrdinates</link> - Returns a version of the given geometry with given ordinate values swapped.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_SymDifference">ST_SymDifference</link> - Computes a geometry representing the portions of geometries A and B that do not intersect.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Tesselate">ST_Tesselate</link> - Perform surface Tessellation of a polygon or polyhedralsurface and returns as a TIN or collection of TINS</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_TransScale">ST_TransScale</link> - Translates and scales a geometry by given offsets and factors.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Translate">ST_Translate</link> - Translates a geometry by given offsets.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_UnaryUnion">ST_UnaryUnion</link> - Computes the union of the components of a single geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Union">ST_Union</link> - Computes a geometry representing the point-set union of the input geometries.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Volume">ST_Volume</link> - Computes the volume of a 3D solid. If applied to surface (even closed) geometries will return 0.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_WrapX">ST_WrapX</link> - Wrap a geometry around an X value.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_X">ST_X</link> - Returns the X coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_XMax">ST_XMax</link> - Returns the X maxima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_XMin">ST_XMin</link> - Returns the X minima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Y">ST_Y</link> - Returns the Y coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_YMax">ST_YMax</link> - Returns the Y maxima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_YMin">ST_YMin</link> - Returns the Y minima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Z">ST_Z</link> - Returns the Z coordinate of a Point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ZMax">ST_ZMax</link> - Returns the Z maxima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ZMin">ST_ZMin</link> - Returns the Z minima of a 2D or 3D bounding box or a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Zmflag">ST_Zmflag</link> - Returns a code indicating the ZM coordinate dimension of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="TG_Equals">Equals</link> - Returns true if two topogeometries are composed of the same topology primitives.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="TG_Intersects">Intersects</link> - Returns true if any pair of primitives from the two topogeometries intersect.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="UpdateGeometrySRID">UpdateGeometrySRID</link> - Updates the SRID of all features in a geometry column, and the table metadata.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="geometry_overlaps_nd">&amp;&amp;&amp;</link> - Returns TRUE if A's n-D bounding box intersects B's n-D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_nd_geometry_gidx">&amp;&amp;&amp;(geometry,gidx)</link> - Returns TRUE if a geometry's (cached) n-D bounding box intersects a n-D float precision bounding box (GIDX).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_nd_gidx_geometry">&amp;&amp;&amp;(gidx,geometry)</link> - Returns TRUE if a n-D float precision bounding box (GIDX) intersects a geometry's (cached) n-D bounding box.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="overlaps_nd_gidx_gidx">&amp;&amp;&amp;(gidx,gidx)</link> - Returns TRUE if two n-D float precision bounding boxes (GIDX) intersect each other.</simpara>
+  </listitem>
+</itemizedlist>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itemizedlist>
+  <listitem>
+    <simpara><link linkend="ST_Area">ST_Area</link> - Returns the area of a polygonal geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsBinary">ST_AsBinary</link> - Return the OGC/ISO Well-Known Binary (WKB) representation of the geometry/geography without SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsEWKT">ST_AsEWKT</link> - Return the Well-Known Text (WKT) representation of the geometry with SRID meta data.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGML">ST_AsGML</link> - Return the geometry as a GML version 2 or 3 element.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsGeoJSON">ST_AsGeoJSON</link> - Return a geometry or feature in GeoJSON format.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsKML">ST_AsKML</link> - Return the geometry as a KML element.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsSVG">ST_AsSVG</link> - Returns SVG path data for a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_AsText">ST_AsText</link> - Return the Well-Known Text (WKT) representation of the geometry/geography without SRID metadata.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Azimuth">ST_Azimuth</link> - Returns the north-based azimuth of a line between two points.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Buffer">ST_Buffer</link> - Computes a geometry covering all points within a given distance from a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Centroid">ST_Centroid</link> - Returns the geometric center of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ClosestPoint">ST_ClosestPoint</link> - Returns the 2D point on g1 that is closest to g2. This is the first point of the shortest line from one geometry to the other.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_CoveredBy">ST_CoveredBy</link> - Tests if every point of A lies in B</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Covers">ST_Covers</link> - Tests if every point of B lies in A</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_DWithin">ST_DWithin</link> - Tests if two geometries are within a given distance</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Distance">ST_Distance</link> - Returns the distance between two geometry or geography values.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeogFromText">ST_GeogFromText</link> - Return a specified geography value from Well-Known Text representation or extended (WKT).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeogFromWKB">ST_GeogFromWKB</link> - Creates a geography instance from a Well-Known Binary geometry representation (WKB) or extended Well Known Binary (EWKB).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_GeographyFromText">ST_GeographyFromText</link> - Return a specified geography value from Well-Known Text representation or extended (WKT).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Geometry_EQ">=</link> - Returns TRUE if the coordinates and coordinate order geometry/geography A are the same as the coordinates and coordinate order of geometry/geography B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Intersection">ST_Intersection</link> - Computes a geometry representing the shared portion of geometries A and B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Intersects">ST_Intersects</link> - Tests if two geometries intersect (they have at least one point in common)</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Length">ST_Length</link> - Returns the 2D length of a linear geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineInterpolatePoint">ST_LineInterpolatePoint</link> - Returns a point interpolated along a line at a fractional location.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineInterpolatePoints">ST_LineInterpolatePoints</link> - Returns points interpolated along a line at a fractional interval.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineLocatePoint">ST_LineLocatePoint</link> - Returns the fractional location of the closest point on a line to a point.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_LineSubstring">ST_LineSubstring</link> - Returns the part of a line between two fractional locations.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Perimeter">ST_Perimeter</link> - Returns the length of the boundary of a polygonal geometry or geography.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Project">ST_Project</link> - Returns a point projected from a start point by a distance and bearing (azimuth).</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Segmentize">ST_Segmentize</link> - Returns a modified geometry/geography having no segment longer than a given distance.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_ShortestLine">ST_ShortestLine</link> - Returns the 2D shortest line between two geometries</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="ST_Summary">ST_Summary</link> - Returns a text summary of the contents of a geometry.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="geometry_distance_knn">&lt;-&gt;</link> - Returns the 2D distance between A and B.</simpara>
+  </listitem>
+  <listitem>
+    <simpara><link linkend="geometry_overlaps">&amp;&amp;</link> - Returns TRUE if A's 2D bounding box intersects B's 2D bounding box.</simpara>
+  </listitem>
+</itemizedlist>
