@@ -7,10 +7,10 @@ oficiais (sem forks). Stack:
 | Componente | Versão | Status |
 |------------|--------|--------|
 | ZFS (pool)  | media-pool 8,03 TiB | ✅ pronta |
-| PostgreSQL  | 18.7 (fonte oficial no repo postgresql/) | ✅ fonte + base PGDG instalada |
-| PostGIS     | 3.5.2 (fonte no repo postgis-3.5.2/) | ✅ fonte presente |
-| PG-Strom    | — (fonte oficial a baixar) | ⏳ adicionar |
-| Citus Data  | 14.3.0 (fonte no repo citus-14.3.0/ | ✅ compilado+instalado |
+| PostgreSQL  | 18.7 (fonte no repo postgresql/) | ✅ compilado do fonte -> /usr/local/pgsql-18 |
+| PostGIS     | 3.5.2 (fonte no repo postgis-3.5.2/) | ✅ compilado+instalado v3.5.2 |
+| PG-Strom    | 6.1 (fonte no repo pgstrom-6.1/) | ✅ compilado+instalado v6.0 |
+| Citus Data  | 14.3.0 (fonte no repo citus-14.3.0/) | ✅ compilado+instalado v14.3-1 |
 
 ## Características-chave
 - Geoespacial (PostGIS)
