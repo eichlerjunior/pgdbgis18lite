@@ -23,6 +23,17 @@ oficiais (sem forks). Stack:
 - Compilar dos fontes oficiais da origem, sem forks
 - Repositório base: eichlerjunior/pgdbgis18lite
 
+## PRINCÍPIO ARQUITETURAL (decidido 19/11/2026)
+**Padronize as camadas de SOFTWARE, não as de tecnologia volátil.**
+- Camadas voláteis (mudam com a tecnologia, NÃO padronizam): CUDA/GPU, PG-Strom,
+  PG-Strom, rede/P2P (CUDA hoje, mas pode virar ROCm/SYCL amanhã).
+- Camadas de software estáveis (ESTAS são o padrão, valem em qualquer hardware):
+  ZFS (pool, recordsize=8k, lz4, datasets dados/WAL) e PostgreSQL (config,
+  modelo de dados, replicação lógica).
+- Consequência: a base do projeto = ZFS + Postgres bem configurados e idênticos
+  em qualquer máquina; as camadas GPU/P2P ficam plugáveis ACIMA, sem travar o
+  padrão. O que puder evoluir (CUDA→outro backend) não exige redesenho da base.
+
 ## Estado por etapa (uma por vez)
 - [x] Repositório PGDG configurado (trixie-pgdg + deb-src)
 - [x] PostgreSQL 18.7 PGDG instalado (base) + headers dev
