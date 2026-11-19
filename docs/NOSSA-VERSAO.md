@@ -38,6 +38,16 @@ oficiais (sem forks). Stack:
 - [x] Repositório PGDG configurado (trixie-pgdg + deb-src)
 - [x] PostgreSQL 18.7 PGDG instalado (base) + headers dev
 - [x] Fonte PG 18.7 no repo
-- [ ] PG-Strom: baixar fonte oficial, compilar contra headers PGDG
+- [x] PG-Strom 6.1: fonte oficial baixado, compilado (CUDA 13.5 + Arrow 25, c++20) e instalado (extensao v6.0)
 - [ ] Citus: baixar fonte oficial, compilar contra headers PGDG
-- [ ] Validar stack completo + cluster na pool ZFS
+- [x] Cluster 'pgdb' validado na pool ZFS: PGDATA em media-pool/media/pgdata
+      (recordsize=8k, lz4, primarycache=all), WAL em media-pool/media/pgwal
+      (primarycache=metadata), porta 5433, PostgreSQL 18.7 respondendo
+
+## Cluster padrão na pool (camada de software)
+- Cluster: `18 pgdb`, porta 5433, dono postgres
+- PGDATA = /media/pool/media/pgdata  |  WAL = /media/pool/media/pgwal
+- Criado: `pg_createcluster 18 pgdb -d .../pgdata -- --waldir=.../pgwal
+  --auth-local=peer --auth-host=scram-sha-256`
+- Receita ZFS: pgdata(8k,lz4,cache=all,atime=off) + pgwal(8k,lz4,cache=metadata)
+- Validação: PostgreSQL 18.7 responde na 5433; WAL gravando no dataset pgwal
