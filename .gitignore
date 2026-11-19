@@ -1,7 +1,17 @@
 *.tar.gz
 *.tar
+*.tgz
 postgis-*/build/
 postgresql/build/
+# artefatos de build (gerados localmente) — nunca versionar
 *.o
+*.lo
+*.la
 *.so
+*.bc
 *.a
+*.log
+config.status
+config.log
+githash.c
+.libs/
