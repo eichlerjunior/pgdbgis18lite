@@ -10,7 +10,7 @@ oficiais (sem forks). Stack:
 | PostgreSQL  | 18.7 (fonte oficial no repo postgresql/) | ✅ fonte + base PGDG instalada |
 | PostGIS     | 3.5.2 (fonte no repo postgis-3.5.2/) | ✅ fonte presente |
 | PG-Strom    | — (fonte oficial a baixar) | ⏳ adicionar |
-| Citus Data  | — (fonte oficial a baixar) | ⏳ adicionar |
+| Citus Data  | 14.3.0 (fonte no repo citus-14.3.0/ | ✅ compilado+instalado |
 
 ## Características-chave
 - Geoespacial (PostGIS)
@@ -39,7 +39,7 @@ oficiais (sem forks). Stack:
 - [x] PostgreSQL 18.7 PGDG instalado (base) + headers dev
 - [x] Fonte PG 18.7 no repo
 - [x] PG-Strom 6.1: fonte oficial baixado, compilado (CUDA 13.5 + Arrow 25, c++20) e instalado (extensao v6.0)
-- [ ] Citus: baixar fonte oficial, compilar contra headers PGDG
+- [x] Citus 14.3.0: fonte oficial compilada (gcc 16.2 contra PG18 PGDG) e instalada; extensao ativa no cluster pgdb (porta 5433, 32 shards, worker localhost:5433)
 - [x] Cluster 'pgdb' validado na pool ZFS: PGDATA em media-pool/media/pgdata
       (recordsize=8k, lz4, primarycache=all), WAL em media-pool/media/pgwal
       (primarycache=metadata), porta 5433, PostgreSQL 18.7 respondendo
