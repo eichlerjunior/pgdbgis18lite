@@ -39,7 +39,6 @@ pgstrom-6.1/   -> make PG_CONFIG=postgresql/pg_config
 Cada extensão segue o fluxo de build padrão do upstream.
 
 ## Dashboard de monitoramento
-
 Em `scripts/dashboard/dash.py` há um painel em um único arquivo (sem dependências
 externas) que lê o estado vivo da stack e serve uma página HTML escura com
 atualização automática a cada 5 s:
@@ -65,6 +64,14 @@ sudo python3 scripts/dashboard/dash.py --listen 0.0.0.0 --port 80
 Abra `http://127.0.0.1:8080/` (o JSON cru fica em `/api`). É leitura apenas,
 não modifica nada. O rodapé do painel insiste na regra do projeto: *um citus
 abaixo do strom* — a única build que o cluster carrega.
+
+## Camada ontológica + geo (especificação técnica)
+
+Em `docs/ESPEC-ONTO-CAMADA-TECNICA.md` há a especificação de desenho da camada
+`onto`: schema de conceitos/hierarquia/relações, mapa coluna→significado, dimensão
+espacial de primeira classe (PostGIS: malha municipal e CEP do IBGE) e consultas
+geoespaciais-tipo (cruzamento RAIS×CNPJ por município, bandas de distância,
+hierarquia CNAE). Foco apenas técnico.
 
 ## Licença
 
